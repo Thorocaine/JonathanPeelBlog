@@ -204,3 +204,9 @@ public class ReactiveObjectTests
        .Select(x => new[] { x as object });
 }
 ```
+
+## Done
+
+That is it for now, I really don't know if this is bthe best way to do that, but it is more than what I have been able to figure out before.
+
+If you have any questions, or suggestions, please leave a comment. If you would like to grab the code I was working on, it is on [GitHub](https://github.com/Thorocaine/JonathanPeelBlog/tree/master/RX-TDD-01).
