@@ -1,5 +1,3 @@
-# Reactive Unit Testing
-
 ## The problem
 
 I have done a project using [Reactive Extentions](http://reactivex.io/), but I have not been able to figure out how to write unit tests for it.
@@ -211,5 +209,5 @@ That is it for now, I really don't know if this is bthe best way to do that, but
 
 If you have any questions, or suggestions, please leave a comment. If you would like to grab the code I was working on, it is on [GitHub](https://github.com/Thorocaine/JonathanPeelBlog/tree/master/RX-TDD-01).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzOTMxODJdfQ==
+eyJoaXN0b3J5IjpbMTE5NTIwNDMyNCwxMDM5MzE4Ml19
 -->
