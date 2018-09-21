@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jonathan.ReactiveProject", "Jonathan.ReactiveProject\Jonathan.ReactiveProject.csproj", "{DFC0CD15-4784-4107-8453-9E35997CD312}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jonathan.ReactiveProjectTests", "Jonathan.ReactiveProjectTests\Jonathan.ReactiveProjectTests.csproj", "{E2D563D4-243A-42FB-8663-C77EEDC88305}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFC0CD15-4784-4107-8453-9E35997CD312}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFC0CD15-4784-4107-8453-9E35997CD312}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFC0CD15-4784-4107-8453-9E35997CD312}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFC0CD15-4784-4107-8453-9E35997CD312}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2D563D4-243A-42FB-8663-C77EEDC88305}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2D563D4-243A-42FB-8663-C77EEDC88305}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2D563D4-243A-42FB-8663-C77EEDC88305}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2D563D4-243A-42FB-8663-C77EEDC88305}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8D633CAF-CA65-4D5F-A4B2-A0710D8ED3D0}
+	EndGlobalSection
+EndGlobal
