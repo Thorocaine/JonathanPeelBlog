@@ -15,7 +15,7 @@ Now I need to create my App "Class", I can't find any XAML for F#, so I will jus
 Rename `Library.fs` to `App.fs` and set its content to:
 ```fsharp
 namespace Jon.FXam
-namespace Xamarin.Forms
+name Xamarin.Forms
 
 type App() =
     inherit Application()
@@ -30,6 +30,6 @@ I use the _Blank App (Android)_ Template, in F#. I name it `Jon.FXam.Android`. S
 
 I add `Xamarin.Forms` through NuGet, I also add a project refernece to my base project. I then need to edit `MainActivity.fs`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjY3NTE2NiwxMDE5NzI5MjUxLC00NTM5Mj
-EzMzAsMzIxMTkwODk3XX0=
+eyJoaXN0b3J5IjpbLTkzNTU5NTkzMCwyNjc1MTY2LDEwMTk3Mj
+kyNTEsLTQ1MzkyMTMzMCwzMjExOTA4OTddfQ==
 -->
