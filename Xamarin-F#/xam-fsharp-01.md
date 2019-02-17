@@ -20,7 +20,14 @@ namespace Xamarin.Forms
 type App() =
     inherit Application()
 ```
+
+This builds.
+
+# Add and Android project
+I am using Android because that is what I am most familar with, and it is what I use most the time for projects at work. If I get the need to use iOS I will update this, or add to it.  For now, it is Android only.
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjU0NDMzNTMsLTQ1MzkyMTMzMCwzMj
-ExOTA4OTddfQ==
+eyJoaXN0b3J5IjpbMTAxOTcyOTI1MSwtNDUzOTIxMzMwLDMyMT
+E5MDg5N119
 -->
