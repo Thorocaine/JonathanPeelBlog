@@ -28,8 +28,8 @@ I am using Android because that is what I am most familar with, and it is what I
 
 I use the _Blank App (Android)_ Template, in F#. I name it `Jon.FXam.Android`. Some people might prefer to use `.Droid` but `.Android` seems to be the current convention.
 
-I add a project refernece to my base project. I then need to edit `MainActivity.fs`.
+I add `Xamarin.Forms` through NuGet, I also add a project refernece to my base project. I then need to edit `MainActivity.fs`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjU0Mzk1MDIsMTAxOTcyOTI1MSwtND
-UzOTIxMzMwLDMyMTE5MDg5N119
+eyJoaXN0b3J5IjpbMjY3NTE2NiwxMDE5NzI5MjUxLC00NTM5Mj
+EzMzAsMzIxMTkwODk3XX0=
 -->
