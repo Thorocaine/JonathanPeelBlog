@@ -22,7 +22,7 @@ type App() =
     inherit Application()
 ```
 
-This builds.
+It builds.
 
 # Add and Android project
 I am using Android because that is what I am most familar with, and it is what I use most the time for projects at work. If I get the need to use iOS I will update this, or add to it.  For now, it is Android only.
@@ -50,9 +50,11 @@ type MainActivity () =
         this.LoadApplication(new App())
 ```
 
-It b
+It builds.
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyMjY0NjY1NywtMTczMDIwMTc3NCwxNT
-M2NTU1MDA3LDI2NzUxNjYsMTAxOTcyOTI1MSwtNDUzOTIxMzMw
-LDMyMTE5MDg5N119
+eyJoaXN0b3J5IjpbLTE5NjY5NDE0NjksLTE3MzAyMDE3NzQsMT
+UzNjU1NTAwNywyNjc1MTY2LDEwMTk3MjkyNTEsLTQ1MzkyMTMz
+MCwzMjExOTA4OTddfQ==
 -->
