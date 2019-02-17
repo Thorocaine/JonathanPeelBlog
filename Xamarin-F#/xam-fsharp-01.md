@@ -1,7 +1,12 @@
 I wanted to give F# a "go" in a Xamarin project, but Visual Studio (at least on Windows) does not have a Xamarin Forms template for F#. This means that I will need to create it myself.
 I am sure it will be possible, and I will use a C# project as a guide.
 
-I am in no way profficient in F#, but that is als
+I am in no way profficient in F#, but that is also because I have never really used it in a "real" project, and I would like to give it a good try.
+
+In this post, I am going to attempt to create just the outline of the project.
+
+#Create a new project
+I am starting with the solution and project
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyMDEyOTgwMV19
+eyJoaXN0b3J5IjpbLTM0MzAzMDAzNl19
 -->
