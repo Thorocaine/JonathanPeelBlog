@@ -10,7 +10,10 @@ In Visual Studio, I am creating an _F#, .Net Standard Class Library_. This will 
 
 I then want to add `Xamarin.Forms` from NuGet.
 
+Now I need to create my App "Class", I can't find any XAML for F#, so I will just have to try my best at coding it.
 
+1. Rename `Library.fs` to `App.fs`
+2. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0ODM2OTA5LDMyMTE5MDg5N119
+eyJoaXN0b3J5IjpbLTQ1MzkyMTMzMCwzMjExOTA4OTddfQ==
 -->
