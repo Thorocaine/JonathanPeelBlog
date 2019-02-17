@@ -92,8 +92,14 @@ The attributes on MainActivity need to reference the theme, so it gets changed t
 ```fsharp
 [<Activity (Label = "Jon.FXam.Android", MainLauncher = true, Icon = "@mipmap/icon", Theme = "@style/MainTheme")>]
 ```
+
+It builds.  
+It also runs, but at the moment it is only a blank screen.
+
+# Content Page
+We are back to the Base 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0MjQ1Mjc3NywtMTk2Njk0MTQ2OSwtMT
+eyJoaXN0b3J5IjpbMTMwOTc3MjgwNywtMTk2Njk0MTQ2OSwtMT
 czMDIwMTc3NCwxNTM2NTU1MDA3LDI2NzUxNjYsMTAxOTcyOTI1
 MSwtNDUzOTIxMzMwLDMyMTE5MDg5N119
 -->
