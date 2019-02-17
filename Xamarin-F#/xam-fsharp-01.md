@@ -30,9 +30,25 @@ I am using Android because that is what I am most familar with, and it is what I
 I use the _Blank App (Android)_ Template, in F#. I name it `Jon.FXam.Android`. Some people might prefer to use `.Droid` but `.Android` seems to be the current convention.
 
 I add `Xamarin.Forms` through NuGet, I also add a project refernece to my base project. I then need to edit `MainActivity.fs`.
+```fsharp
+namespace Jon.FXam.Android
 
+open Android.App
+open Xamarin.Forms
+open Xamarin.Forms.Platform.Android
 
+type Resources = Jon.FXam.Android.Resource
+
+[<Activity (Label = "Jon.FXam.Android", MainLauncher = true, Icon = "@mipmap/icon")>]
+type MainActivity () =
+    inherit FormsAppCompatActivity()
+
+    override this.OnCreate (bundle) =
+        base.OnCreate (bundle)
+        Forms.Init(this, bundle)
+        this.LoadApplication(new App())
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDE0NDA5ODA5LDI2NzUxNjYsMTAxOTcyOT
-I1MSwtNDUzOTIxMzMwLDMyMTE5MDg5N119
+eyJoaXN0b3J5IjpbMTUzNjU1NTAwNywyNjc1MTY2LDEwMTk3Mj
+kyNTEsLTQ1MzkyMTMzMCwzMjExOTA4OTddfQ==
 -->
