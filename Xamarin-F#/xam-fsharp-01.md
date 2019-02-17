@@ -100,9 +100,28 @@ It also runs, but at the moment it is only a blank screen.
 We are back to the Base Project.
 
 I add `New Item` to the project,  and select _Source File_. There is no XAML option. That is something I will miss, but even in a C# project project XAML is optional.  I name it `Page1.fs`, and create a very basic outline of Xamarin Forms Page.
+```fsharp
+namespace Jon.FXam
 
+open Xamarin.Forms
+
+type Page1() =
+    inherit ContentPage (Content = Page1.content ())
+
+    static member private content () =
+        let layout = new StackLayout()
+        layout.Children.Add (new Label (Text = "Welcome to F# & Xamarin Forms!"))
+        layout
+
+```
+
+Then reference that from `App`.
+```fsharp
+type App () =
+    inherit Application (MainPage = new Page1 ())
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjYwOTEzMDcwLC0xOTI4MDk5NDU2LC0xOT
+eyJoaXN0b3J5IjpbMjU3ODk2MDE5LC0xOTI4MDk5NDU2LC0xOT
 Y2OTQxNDY5LC0xNzMwMjAxNzc0LDE1MzY1NTUwMDcsMjY3NTE2
 NiwxMDE5NzI5MjUxLC00NTM5MjEzMzAsMzIxMTkwODk3XX0=
 -->
