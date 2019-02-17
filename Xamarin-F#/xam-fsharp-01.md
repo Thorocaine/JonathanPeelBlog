@@ -97,9 +97,11 @@ It builds.
 It also runs, but at the moment it is only a blank screen.
 
 # Content Page
-We are back to the Base 
+We are back to the Base Project.
+
+I add `New Item` to the project,  and select _Source File_. There is no XAML option. That is something I will miss, but even in a C# project project XAML is optional.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwOTc3MjgwNywtMTk2Njk0MTQ2OSwtMT
-czMDIwMTc3NCwxNTM2NTU1MDA3LDI2NzUxNjYsMTAxOTcyOTI1
-MSwtNDUzOTIxMzMwLDMyMTE5MDg5N119
+eyJoaXN0b3J5IjpbLTExNjQ4ODU0MjMsLTE5NjY5NDE0NjksLT
+E3MzAyMDE3NzQsMTUzNjU1NTAwNywyNjc1MTY2LDEwMTk3Mjky
+NTEsLTQ1MzkyMTMzMCwzMjExOTA4OTddfQ==
 -->
