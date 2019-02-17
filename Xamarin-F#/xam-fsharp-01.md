@@ -88,9 +88,12 @@ App Compat needs a theme, so I copy the `styles.xml` file from another Xamarin p
 ```
 
 ## MainActivity
-The attributes on MainAct
+The attributes on MainActivity need to reference the theme, so it gets changed to
+```fsharp
+[<Activity (Label = "Jon.FXam.Android", MainLauncher = true, Icon = "@mipmap/icon", Theme = "@style/MainTheme")>]
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MjI4NTQxMDAsLTE5NjY5NDE0NjksLT
-E3MzAyMDE3NzQsMTUzNjU1NTAwNywyNjc1MTY2LDEwMTk3Mjky
-NTEsLTQ1MzkyMTMzMCwzMjExOTA4OTddfQ==
+eyJoaXN0b3J5IjpbLTI0MjQ1Mjc3NywtMTk2Njk0MTQ2OSwtMT
+czMDIwMTc3NCwxNTM2NTU1MDA3LDI2NzUxNjYsMTAxOTcyOTI1
+MSwtNDUzOTIxMzMwLDMyMTE5MDg5N119
 -->
