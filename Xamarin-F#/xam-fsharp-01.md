@@ -117,8 +117,7 @@ type Page1() =
 
 ```
 
-I do not know if this is the best way to do this (F# is not a first language for me), but it is working.
-
+I do not know if this is the best way to do this (F# is not a first language for me), but it is working, so for now I am happy.
 
 Then reference that from `App`.
 ```fsharp
@@ -133,8 +132,8 @@ It shows something on the screen.
 # Conclusion
 This is the point that I was wanting to get to, and I am happy here. Happy that it can be done, and happy that I have a base project that I can clone and use as a starting poiny.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1MTIyNjM0NCwxMTAwMTc5NjE0LC0xOT
-I4MDk5NDU2LC0xOTY2OTQxNDY5LC0xNzMwMjAxNzc0LDE1MzY1
-NTUwMDcsMjY3NTE2NiwxMDE5NzI5MjUxLC00NTM5MjEzMzAsMz
-IxMTkwODk3XX0=
+eyJoaXN0b3J5IjpbMjM2NjAxNTA4LDExMDAxNzk2MTQsLTE5Mj
+gwOTk0NTYsLTE5NjY5NDE0NjksLTE3MzAyMDE3NzQsMTUzNjU1
+NTAwNywyNjc1MTY2LDEwMTk3MjkyNTEsLTQ1MzkyMTMzMCwzMj
+ExOTA4OTddfQ==
 -->
