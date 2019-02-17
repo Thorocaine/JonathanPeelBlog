@@ -6,7 +6,7 @@ I am in no way profficient in F#, but that is also because I have never really u
 In this post, I am going to attempt to create just the outline of the project.
 
 #Create a new project
-In Visual Studio, I am creating an _F#, .Net Standard Class Library_. This will become my Xamarin Forms library (c
+In Visual Studio, I am creating an _F#, .Net Standard Class Library_. This will become my Xamarin Forms library (called PCL before .Net Standard). I am naming my project `Jon.FXam`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzMzA3MTUwOV19
+eyJoaXN0b3J5IjpbLTc3ODMzMjg5N119
 -->
