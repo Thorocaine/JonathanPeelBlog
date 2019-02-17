@@ -12,8 +12,15 @@ I then want to add `Xamarin.Forms` from NuGet.
 
 Now I need to create my App "Class", I can't find any XAML for F#, so I will just have to try my best at coding it.
 
-1. Rename `Library.fs` to `App.fs`
-2. 
+Rename `Library.fs` to `App.fs` and set its content to:
+```fsharp
+namespace Jon.FXam
+namespace Xamarin.Forms
+
+type App() =
+    inherit Application()
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1MzkyMTMzMCwzMjExOTA4OTddfQ==
+eyJoaXN0b3J5IjpbLTEwNjU0NDMzNTMsLTQ1MzkyMTMzMCwzMj
+ExOTA4OTddfQ==
 -->
