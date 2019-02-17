@@ -132,10 +132,10 @@ It shows something on the screen.
 # Conclusion
 This is the point that I was wanting to get to, and I am happy here. Happy that it can be done, and happy that I have a base project that I can clone and use as a starting poiny.
 
-
+To par
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5OTQxOTAwOCwxMTAwMTc5NjE0LC0xOT
-I4MDk5NDU2LC0xOTY2OTQxNDY5LC0xNzMwMjAxNzc0LDE1MzY1
-NTUwMDcsMjY3NTE2NiwxMDE5NzI5MjUxLC00NTM5MjEzMzAsMz
-IxMTkwODk3XX0=
+eyJoaXN0b3J5IjpbLTgwNjU5Njg5MiwyMDk5NDE5MDA4LDExMD
+AxNzk2MTQsLTE5MjgwOTk0NTYsLTE5NjY5NDE0NjksLTE3MzAy
+MDE3NzQsMTUzNjU1NTAwNywyNjc1MTY2LDEwMTk3MjkyNTEsLT
+Q1MzkyMTMzMCwzMjExOTA4OTddfQ==
 -->
