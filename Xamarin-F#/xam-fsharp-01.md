@@ -105,13 +105,15 @@ namespace Jon.FXam
 
 open Xamarin.Forms
 
-type Page1() =
-    inherit ContentPage (Content = Page1.content ())
-
-    static member private content () =
+module private Page1 =
+    let content () =
         let layout = new StackLayout()
         layout.Children.Add (new Label (Text = "Welcome to F# & Xamarin Forms!"))
         layout
+
+type Page1() =
+    inherit ContentPage (Content = Page1.content())
+
 
 ```
 
@@ -131,7 +133,8 @@ It shows something on the screen.
 # Conclusion
 This is the point that I was wanting to get to, and I am happy here. Happy that it can be done, and happy that I have a base project that I can clone and use as a starting poiny.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwMDE3OTYxNCwtMTkyODA5OTQ1NiwtMT
-k2Njk0MTQ2OSwtMTczMDIwMTc3NCwxNTM2NTU1MDA3LDI2NzUx
-NjYsMTAxOTcyOTI1MSwtNDUzOTIxMzMwLDMyMTE5MDg5N119
+eyJoaXN0b3J5IjpbMTQ1MTIyNjM0NCwxMTAwMTc5NjE0LC0xOT
+I4MDk5NDU2LC0xOTY2OTQxNDY5LC0xNzMwMjAxNzc0LDE1MzY1
+NTUwMDcsMjY3NTE2NiwxMDE5NzI5MjUxLC00NTM5MjEzMzAsMz
+IxMTkwODk3XX0=
 -->
