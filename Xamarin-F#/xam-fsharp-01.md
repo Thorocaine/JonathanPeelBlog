@@ -1,7 +1,8 @@
+
 I wanted to give F# a "go" in a Xamarin project, but Visual Studio (at least on Windows) does not have a Xamarin Forms template for F#. This means that I will need to create it myself.
 I am sure it will be possible, and I will use a C# project as a guide.
 
-I am in no way profficient in F#, but that is also because I have never really used it in a "real" project, and I would like to give it a good try.
+I am in no way proficient in F#, but that is also because I have never really used it in a "real" project, and I would like to give it a good try.
 
 In this post, I am going to attempt to create just the outline of the project.
 
@@ -24,12 +25,12 @@ type App() =
 
 It builds.
 
-# Add and Android project
-I am using Android because that is what I am most familar with, and it is what I use most the time for projects at work. If I get the need to use iOS I will update this, or add to it.  For now, it is Android only.
+# Add an Android project
+I am using Android because that is what I am most familiar with, and it is what I use most the time for projects at work. If I get the need to use iOS I will update this, or add to it.  For now, it is Android only.
 
 I use the _Blank App (Android)_ Template, in F#. I name it `Jon.FXam.Android`. Some people might prefer to use `.Droid` but `.Android` seems to be the current convention.
 
-I add `Xamarin.Forms` through NuGet, I also add a project refernece to my base project. I then need to edit `MainActivity.fs`.
+I add `Xamarin.Forms` through NuGet, I also add a project reference to my base project. I then need to edit `MainActivity.fs`.
 ```fsharp
 namespace Jon.FXam.Android
 
@@ -99,7 +100,7 @@ It also runs, but at the moment it is only a blank screen.
 # Content Page
 We are back to the Base Project.
 
-I add `New Item` to the project,  and select _Source File_. There is no XAML option. That is something I will miss, but even in a C# project project XAML is optional.  I name it `Page1.fs`, and create a very basic outline of Xamarin Forms Page.
+I add `New Item` to the project,  and select _Source File_. There is no XAML option. That is something I will miss, but even in a C# project, XAML is optional.  I name it `Page1.fs`, and create a very basic outline of Xamarin Forms Page.
 ```fsharp
 namespace Jon.FXam
 
@@ -117,7 +118,7 @@ type Page1() =
 
 ```
 
-I do not know if this is the best way to do this (F# is not a first language for me), but it is working, so for now I am happy.
+I do not know if this is the best way to do this (F# is not the first language for me), but it is working, so, for now, I am happy.
 
 Then reference that from `App`.
 ```fsharp
@@ -130,12 +131,12 @@ It runs.
 It shows something on the screen.
 
 # Conclusion
-This is the point that I was wanting to get to, and I am happy here. Happy that it can be done, and happy that I have a base project that I can clone and use as a starting poiny.
+This is the point that I was wanting to get to, and I am happy here. Happy that it can be done, and happy that I have a base project that I can clone and use as a starting point.
 
-To parose, copy, or make fun of any of the code, please find it on [GitHub](https://github.com/Thorocaine/JonathanPeelBlog/tree/master/Xamarin-F%23/FXam)
+To peruse, copy, or make fun of any of the code, please find it on [GitHub](https://github.com/Thorocaine/JonathanPeelBlog/tree/master/Xamarin-F%23/FXam)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyNzIzMDYyMCwyMDk5NDE5MDA4LDExMD
-AxNzk2MTQsLTE5MjgwOTk0NTYsLTE5NjY5NDE0NjksLTE3MzAy
-MDE3NzQsMTUzNjU1NTAwNywyNjc1MTY2LDEwMTk3MjkyNTEsLT
-Q1MzkyMTMzMCwzMjExOTA4OTddfQ==
+eyJoaXN0b3J5IjpbOTc3ODYwNTkzLC0yMjcyMzA2MjAsMjA5OT
+QxOTAwOCwxMTAwMTc5NjE0LC0xOTI4MDk5NDU2LC0xOTY2OTQx
+NDY5LC0xNzMwMjAxNzc0LDE1MzY1NTUwMDcsMjY3NTE2NiwxMD
+E5NzI5MjUxLC00NTM5MjEzMzAsMzIxMTkwODk3XX0=
 -->
