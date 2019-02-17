@@ -115,6 +115,9 @@ type Page1() =
 
 ```
 
+I do not know if this is the best way to do this (F# is not a first language for me), but it is working.
+
+
 Then reference that from `App`.
 ```fsharp
 type App () =
@@ -126,10 +129,9 @@ It runs.
 It shows something on the screen.
 
 # Conclusion
-This is the point that I was wanting to get to, and I am happy here. Happy that it can be done, and happy that I have a base project that I can clone 
+This is the point that I was wanting to get to, and I am happy here. Happy that it can be done, and happy that I have a base project that I can clone and use as a starting poiny.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjc1MTIzNTcsLTE5MjgwOTk0NTYsLT
-E5NjY5NDE0NjksLTE3MzAyMDE3NzQsMTUzNjU1NTAwNywyNjc1
-MTY2LDEwMTk3MjkyNTEsLTQ1MzkyMTMzMCwzMjExOTA4OTddfQ
-==
+eyJoaXN0b3J5IjpbMTEwMDE3OTYxNCwtMTkyODA5OTQ1NiwtMT
+k2Njk0MTQ2OSwtMTczMDIwMTc3NCwxNTM2NTU1MDA3LDI2NzUx
+NjYsMTAxOTcyOTI1MSwtNDUzOTIxMzMwLDMyMTE5MDg5N119
 -->
