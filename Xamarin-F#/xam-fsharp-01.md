@@ -120,8 +120,16 @@ Then reference that from `App`.
 type App () =
     inherit Application (MainPage = new Page1 ())
 ```
+
+It builds.  
+It runs.  
+It shows something on the screen.
+
+# Conclusion
+This is the point that I was wanting to get to, and I am happy here. Happy that it can be done, and happy that I have a base project that I can clone 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjU3ODk2MDE5LC0xOTI4MDk5NDU2LC0xOT
-Y2OTQxNDY5LC0xNzMwMjAxNzc0LDE1MzY1NTUwMDcsMjY3NTE2
-NiwxMDE5NzI5MjUxLC00NTM5MjEzMzAsMzIxMTkwODk3XX0=
+eyJoaXN0b3J5IjpbLTIwNjc1MTIzNTcsLTE5MjgwOTk0NTYsLT
+E5NjY5NDE0NjksLTE3MzAyMDE3NzQsMTUzNjU1NTAwNywyNjc1
+MTY2LDEwMTk3MjkyNTEsLTQ1MzkyMTMzMCwzMjExOTA4OTddfQ
+==
 -->
