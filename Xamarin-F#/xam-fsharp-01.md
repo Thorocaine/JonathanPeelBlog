@@ -28,9 +28,8 @@ I am using Android because that is what I am most familar with, and it is what I
 
 I use the _Blank App (Android)_ Template, in F#. I name it `Jon.FXam.Android`. Some people might prefer to use `.Droid` but `.Android` seems to be the current convention.
 
-1. I add a project refernece to my base project.
-2. I then ne
+I add a project refernece to my base project. I then need to edit `MainActivity.fs`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4MDY0OTIzMiwxMDE5NzI5MjUxLC00NT
-M5MjEzMzAsMzIxMTkwODk3XX0=
+eyJoaXN0b3J5IjpbLTE4NjU0Mzk1MDIsMTAxOTcyOTI1MSwtND
+UzOTIxMzMwLDMyMTE5MDg5N119
 -->
