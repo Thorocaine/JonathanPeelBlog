@@ -53,10 +53,44 @@ type MainActivity () =
 It builds.
 
 # AppCompat
+## Theme
 App Compat needs a theme, so I copy the `styles.xml` file from another Xamarin project. This goes in  __`Resources`__ __>__ __`values`__, and needs the build action set to `AndroidResource`.
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <style name="MainTheme" parent="MainTheme.Base">
+  </style>
+  <!-- Base theme applied no matter what API -->
+  <style name="MainTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!--<item name="android:colorActivatedHighlight">#00f</item>-->
+    <!--If you are using revision 22.1 please use just windowNoTitle. Without android:-->
+    <item name="windowNoTitle">true</item>
+    <!--We will be using the toolbar so no need to show ActionBar-->
+    <item name="windowActionBar">false</item>
+    <!-- Set theme colors from http://www.google.com/design/spec/style/color.html#color-color-palette -->
+    <!-- colorPrimary is used for the default action bar background -->
+    <item name="colorPrimary">#2196F3</item>
+    <!-- colorPrimaryDark is used for the status bar -->
+    <item name="colorPrimaryDark">#1976D2</item>
+    <!-- colorAccent is used as the default value for colorControlActivated
+         which is used to tint widgets -->
+    <item name="colorAccent">#FF4081</item>
+    <!-- You can also set colorControlNormal, colorControlActivated
+         colorControlHighlight and colorSwitchThumbNormal. -->
+    <item name="windowActionModeOverlay">true</item>
 
+    <item name="android:datePickerDialogTheme">@style/AppCompatDialogStyle</item>
+  </style>
+  <style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+    <item name="colorAccent">#FF4081</item>
+  </style>
+</resources>
+```
+
+## MainActivity
+The attributes on MainAct
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4MTEwMjY5NCwtMTk2Njk0MTQ2OSwtMT
-czMDIwMTc3NCwxNTM2NTU1MDA3LDI2NzUxNjYsMTAxOTcyOTI1
-MSwtNDUzOTIxMzMwLDMyMTE5MDg5N119
+eyJoaXN0b3J5IjpbLTE1MjI4NTQxMDAsLTE5NjY5NDE0NjksLT
+E3MzAyMDE3NzQsMTUzNjU1NTAwNywyNjc1MTY2LDEwMTk3Mjky
+NTEsLTQ1MzkyMTMzMCwzMjExOTA4OTddfQ==
 -->
