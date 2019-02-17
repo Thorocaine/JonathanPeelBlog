@@ -135,8 +135,12 @@ This is the point that I was wanting to get to, and I am happy here. Happy that 
 
 To peruse, copy, or make fun of any of the code, please find it on [GitHub](https://github.com/Thorocaine/JonathanPeelBlog/tree/master/Xamarin-F%23/FXam)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTc3ODYwNTkzLC0yMjcyMzA2MjAsMjA5OT
-QxOTAwOCwxMTAwMTc5NjE0LC0xOTI4MDk5NDU2LC0xOTY2OTQx
-NDY5LC0xNzMwMjAxNzc0LDE1MzY1NTUwMDcsMjY3NTE2NiwxMD
-E5NzI5MjUxLC00NTM5MjEzMzAsMzIxMTkwODk3XX0=
+eyJwcm9wZXJ0aWVzIjoidGl0bGU6ICdYYW1hcmluIEZvcm1zLC
+B3aXRoIEYjJ1xuYXV0aG9yOiBKb25hdGhhbiBQZWVsXG50YWdz
+OiAnWGFtYXJpbiwgWGFtYXJpbi5Gb3JtcywgRiMsIC5OZXQnXG
+4iLCJoaXN0b3J5IjpbLTE2ODMwOTI2MDMsOTc3ODYwNTkzLC0y
+MjcyMzA2MjAsMjA5OTQxOTAwOCwxMTAwMTc5NjE0LC0xOTI4MD
+k5NDU2LC0xOTY2OTQxNDY5LC0xNzMwMjAxNzc0LDE1MzY1NTUw
+MDcsMjY3NTE2NiwxMDE5NzI5MjUxLC00NTM5MjEzMzAsMzIxMT
+kwODk3XX0=
 -->
