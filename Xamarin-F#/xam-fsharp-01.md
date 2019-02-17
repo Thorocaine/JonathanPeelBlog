@@ -100,8 +100,9 @@ It also runs, but at the moment it is only a blank screen.
 We are back to the Base Project.
 
 I add `New Item` to the project,  and select _Source File_. There is no XAML option. That is something I will miss, but even in a C# project project XAML is optional.  I name it `Page1.fs`, and create a very basic outline of Xamarin Forms Page.
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjgwOTk0NTYsLTE5NjY5NDE0NjksLT
-E3MzAyMDE3NzQsMTUzNjU1NTAwNywyNjc1MTY2LDEwMTk3Mjky
-NTEsLTQ1MzkyMTMzMCwzMjExOTA4OTddfQ==
+eyJoaXN0b3J5IjpbMjYwOTEzMDcwLC0xOTI4MDk5NDU2LC0xOT
+Y2OTQxNDY5LC0xNzMwMjAxNzc0LDE1MzY1NTUwMDcsMjY3NTE2
+NiwxMDE5NzI5MjUxLC00NTM5MjEzMzAsMzIxMTkwODk3XX0=
 -->
