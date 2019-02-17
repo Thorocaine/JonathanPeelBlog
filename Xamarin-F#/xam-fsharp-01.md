@@ -33,6 +33,7 @@ I add `Xamarin.Forms` through NuGet, I also add a project refernece to my base p
 ```fsharp
 namespace Jon.FXam.Android
 
+open Jon.FXam
 open Android.App
 open Xamarin.Forms
 open Xamarin.Forms.Platform.Android
@@ -49,6 +50,7 @@ type MainActivity () =
         this.LoadApplication(new App())
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzNjU1NTAwNywyNjc1MTY2LDEwMTk3Mj
-kyNTEsLTQ1MzkyMTMzMCwzMjExOTA4OTddfQ==
+eyJoaXN0b3J5IjpbLTE3MzAyMDE3NzQsMTUzNjU1NTAwNywyNj
+c1MTY2LDEwMTk3MjkyNTEsLTQ1MzkyMTMzMCwzMjExOTA4OTdd
+fQ==
 -->
