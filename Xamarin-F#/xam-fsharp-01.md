@@ -52,9 +52,11 @@ type MainActivity () =
 
 It builds.
 
+# AppCompat
+App Compat needs a theme, so I copy the `styles.xml` file from another Xamarin project. This goes in  __
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NjY5NDE0NjksLTE3MzAyMDE3NzQsMT
-UzNjU1NTAwNywyNjc1MTY2LDEwMTk3MjkyNTEsLTQ1MzkyMTMz
-MCwzMjExOTA4OTddfQ==
+eyJoaXN0b3J5IjpbLTc5ODQwMzQ2OCwtMTk2Njk0MTQ2OSwtMT
+czMDIwMTc3NCwxNTM2NTU1MDA3LDI2NzUxNjYsMTAxOTcyOTI1
+MSwtNDUzOTIxMzMwLDMyMTE5MDg5N119
 -->
