@@ -7,6 +7,8 @@ In this post, I am going to attempt to create just the outline of the project.
 
 # Create a new project
 In Visual Studio, I am creating an _F#, .Net Standard Class Library_. This will become my Xamarin Forms library (called PCL before .Net Standard). I am naming my project `Jon.FXam`.
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDEyNzc5OTI1XX0=
+eyJoaXN0b3J5IjpbMzIxMTkwODk3XX0=
 -->
