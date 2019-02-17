@@ -53,10 +53,10 @@ type MainActivity () =
 It builds.
 
 # AppCompat
-App Compat needs a theme, so I copy the `styles.xml` file from another Xamarin project. This goes in  __
+App Compat needs a theme, so I copy the `styles.xml` file from another Xamarin project. This goes in  __`Resources`__ __>__ __`values`__, and needs the build action set to `AndroidResource`.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5ODQwMzQ2OCwtMTk2Njk0MTQ2OSwtMT
+eyJoaXN0b3J5IjpbMTQ4MTEwMjY5NCwtMTk2Njk0MTQ2OSwtMT
 czMDIwMTc3NCwxNTM2NTU1MDA3LDI2NzUxNjYsMTAxOTcyOTI1
 MSwtNDUzOTIxMzMwLDMyMTE5MDg5N119
 -->
