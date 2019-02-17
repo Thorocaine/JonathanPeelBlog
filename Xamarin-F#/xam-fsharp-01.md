@@ -49,8 +49,10 @@ type MainActivity () =
         Forms.Init(this, bundle)
         this.LoadApplication(new App())
 ```
+
+It b
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzAyMDE3NzQsMTUzNjU1NTAwNywyNj
-c1MTY2LDEwMTk3MjkyNTEsLTQ1MzkyMTMzMCwzMjExOTA4OTdd
-fQ==
+eyJoaXN0b3J5IjpbMTcyMjY0NjY1NywtMTczMDIwMTc3NCwxNT
+M2NTU1MDA3LDI2NzUxNjYsMTAxOTcyOTI1MSwtNDUzOTIxMzMw
+LDMyMTE5MDg5N119
 -->
