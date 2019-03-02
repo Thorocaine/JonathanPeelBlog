@@ -148,8 +148,23 @@ Create an XML file in the _Forms_ project, call it `Page2.xaml`
 ### Code File
 Create an _F#_ file called `Page2.xaml.fs`
 ```fsharp
+namespace Jon.FXam
 
+open Xamarin.Forms
+open Xamarin.Forms.Xaml
+
+type Page2() =
+   inherit ContentPage()
+   let _ = base.LoadFromXaml(typeof<Page2>)
 ```
+
+### App
+Set the application main page to `Page`, in `App.fs`
+```fsharp
+type App () =
+    inherit Application (MainPage = new Page1 ())
+```
+
 
 Rename the file to `XamlPage.xaml`
 Add an F# file called `XamlPage.xaml.fs`
@@ -201,10 +216,10 @@ To peruse, copy, or make fun of any of the code, please find it on [GitHub](http
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6ICdYYW1hcmluIEZvcm1zLC
 B3aXRoIEYjJ1xuYXV0aG9yOiBKb25hdGhhbiBQZWVsXG50YWdz
 OiAnWGFtYXJpbiwgWGFtYXJpbi5Gb3JtcywgRiMsIC5OZXQnXG
-4iLCJoaXN0b3J5IjpbLTM1NzE2MjU3MywtMjA4NzIxMzY5NSwx
-ODc2ODA3NTgyLC0xNjgzMDkyNjAzLDk3Nzg2MDU5MywtMjI3Mj
-MwNjIwLDIwOTk0MTkwMDgsMTEwMDE3OTYxNCwtMTkyODA5OTQ1
-NiwtMTk2Njk0MTQ2OSwtMTczMDIwMTc3NCwxNTM2NTU1MDA3LD
-I2NzUxNjYsMTAxOTcyOTI1MSwtNDUzOTIxMzMwLDMyMTE5MDg5
-N119
+4iLCJoaXN0b3J5IjpbLTIwOTQ4MDIzMDQsLTIwODcyMTM2OTUs
+MTg3NjgwNzU4MiwtMTY4MzA5MjYwMyw5Nzc4NjA1OTMsLTIyNz
+IzMDYyMCwyMDk5NDE5MDA4LDExMDAxNzk2MTQsLTE5MjgwOTk0
+NTYsLTE5NjY5NDE0NjksLTE3MzAyMDE3NzQsMTUzNjU1NTAwNy
+wyNjc1MTY2LDEwMTk3MjkyNTEsLTQ1MzkyMTMzMCwzMjExOTA4
+OTddfQ==
 -->
