@@ -135,23 +135,26 @@ Visusal Studio for Mac has F# Xamarin projects (I am jelous). It also allows you
 
 I am going to right click on my _Forms_ project, and add a file. I am selecting _XML File_ type, and I can rename it later.
 ```xml
-<?xml version="1.0" encoding="utf-8"?>  
-<ContentPage xmlns="[http://xamarin.com/schemas/2014/forms](http://xamarin.com/schemas/2014/forms)" xmlns:x="[http://schemas.microsoft.com/winfx/2009/xaml](http://schemas.microsoft.com/winfx/2009/xaml)" xmlns:local="clr-namespace:FXamSharp" x:Class="FXamSharp.MainPage">  
-<Label Text="XAML FILE" VerticalOptions="Center" HorizontalOptions="Center" />  
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="[http://xamarin.com/schemas/2014/forms](http://xamarin.com/schemas/2014/forms)"
+             xmlns:x="[http://schemas.microsoft.com/winfx/2009/xaml](http://schemas.microsoft.com/winfx/2009/xaml)"
+             xmlns:local="clr-namespace:Jon.FXam"
+             x:Class="XamlPage">
+  <Label Text="XAML FILE" VerticalOptions="Center" HorizontalOptions="Center" />
 </ContentPage>
 ```
 
 Rename the file to `XamlPage.xaml`
 Add an F# file called `XamlPage.xaml.fs`
 ```fsharp
-namespace FXamSharp
+namespace Jon.FXam
 
 open Xamarin.Forms
 open Xamarin.Forms.Xaml
 
-type MainPage() =
+type XamlPage() =
    inherit ContentPage()
-   let _ = base.LoadFromXaml(typeof<MainPage>)
+   let _ = base.LoadFromXaml(typeof<XamlPage>)
 ```
 
 # Conclusion
@@ -162,9 +165,9 @@ To peruse, copy, or make fun of any of the code, please find it on [GitHub](http
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6ICdYYW1hcmluIEZvcm1zLC
 B3aXRoIEYjJ1xuYXV0aG9yOiBKb25hdGhhbiBQZWVsXG50YWdz
 OiAnWGFtYXJpbiwgWGFtYXJpbi5Gb3JtcywgRiMsIC5OZXQnXG
-4iLCJoaXN0b3J5IjpbLTIxMzQyMDk0MzksLTE2ODMwOTI2MDMs
-OTc3ODYwNTkzLC0yMjcyMzA2MjAsMjA5OTQxOTAwOCwxMTAwMT
-c5NjE0LC0xOTI4MDk5NDU2LC0xOTY2OTQxNDY5LC0xNzMwMjAx
-Nzc0LDE1MzY1NTUwMDcsMjY3NTE2NiwxMDE5NzI5MjUxLC00NT
-M5MjEzMzAsMzIxMTkwODk3XX0=
+4iLCJoaXN0b3J5IjpbMTg3NjgwNzU4MiwtMTY4MzA5MjYwMyw5
+Nzc4NjA1OTMsLTIyNzIzMDYyMCwyMDk5NDE5MDA4LDExMDAxNz
+k2MTQsLTE5MjgwOTk0NTYsLTE5NjY5NDE0NjksLTE3MzAyMDE3
+NzQsMTUzNjU1NTAwNywyNjc1MTY2LDEwMTk3MjkyNTEsLTQ1Mz
+kyMTMzMCwzMjExOTA4OTddfQ==
 -->
