@@ -167,6 +167,8 @@ type App () =
     inherit Application (MainPage = new Page2 ())
 ```
 
+This base XAML page can now be coppied if more XAML pages are needed.
+
 # Conclusion
 This is the point that I was wanting to get to, and I am happy here. Happy that it can be done, and happy that I have a base project that I can clone and use as a starting point.
 
@@ -175,11 +177,10 @@ To peruse, copy, or make fun of any of the code, please find it on [GitHub](http
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6ICdYYW1hcmluIEZvcm1zLC
 B3aXRoIEYjJ1xuYXV0aG9yOiBKb25hdGhhbiBQZWVsXG50YWdz
 OiAnWGFtYXJpbiwgWGFtYXJpbi5Gb3JtcywgRiMsIC5OZXQnXG
-4iLCJoaXN0b3J5IjpbMTU5NTY5NDg5MCwtNzc5NzU5ODkxLDEz
-ODkyMDI2NTUsLTIwOTQ4MDIzMDQsLTIwODcyMTM2OTUsMTg3Nj
-gwNzU4MiwtMTY4MzA5MjYwMyw5Nzc4NjA1OTMsLTIyNzIzMDYy
-MCwyMDk5NDE5MDA4LDExMDAxNzk2MTQsLTE5MjgwOTk0NTYsLT
-E5NjY5NDE0NjksLTE3MzAyMDE3NzQsMTUzNjU1NTAwNywyNjc1
-MTY2LDEwMTk3MjkyNTEsLTQ1MzkyMTMzMCwzMjExOTA4OTddfQ
-==
+4iLCJoaXN0b3J5IjpbOTYyMzAwMTg2LC03Nzk3NTk4OTEsMTM4
+OTIwMjY1NSwtMjA5NDgwMjMwNCwtMjA4NzIxMzY5NSwxODc2OD
+A3NTgyLC0xNjgzMDkyNjAzLDk3Nzg2MDU5MywtMjI3MjMwNjIw
+LDIwOTk0MTkwMDgsMTEwMDE3OTYxNCwtMTkyODA5OTQ1NiwtMT
+k2Njk0MTQ2OSwtMTczMDIwMTc3NCwxNTM2NTU1MDA3LDI2NzUx
+NjYsMTAxOTcyOTI1MSwtNDUzOTIxMzMwLDMyMTE5MDg5N119
 -->
