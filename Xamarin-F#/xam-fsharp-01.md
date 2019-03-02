@@ -157,6 +157,15 @@ type XamlPage() =
    let _ = base.LoadFromXaml(typeof<XamlPage>)
 ```
 
+To load the XAML file, we need to change `App.fs`
+```fsharp
+type App () =
+    inherit Application (MainPage = new XamlPage ())
+```
+
+This builds, but it does not run.
+We need to tell 
+
 # Conclusion
 This is the point that I was wanting to get to, and I am happy here. Happy that it can be done, and happy that I have a base project that I can clone and use as a starting point.
 
@@ -165,9 +174,9 @@ To peruse, copy, or make fun of any of the code, please find it on [GitHub](http
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6ICdYYW1hcmluIEZvcm1zLC
 B3aXRoIEYjJ1xuYXV0aG9yOiBKb25hdGhhbiBQZWVsXG50YWdz
 OiAnWGFtYXJpbiwgWGFtYXJpbi5Gb3JtcywgRiMsIC5OZXQnXG
-4iLCJoaXN0b3J5IjpbMTg3NjgwNzU4MiwtMTY4MzA5MjYwMyw5
-Nzc4NjA1OTMsLTIyNzIzMDYyMCwyMDk5NDE5MDA4LDExMDAxNz
-k2MTQsLTE5MjgwOTk0NTYsLTE5NjY5NDE0NjksLTE3MzAyMDE3
-NzQsMTUzNjU1NTAwNywyNjc1MTY2LDEwMTk3MjkyNTEsLTQ1Mz
-kyMTMzMCwzMjExOTA4OTddfQ==
+4iLCJoaXN0b3J5IjpbMTE2OTg1NzEyNywxODc2ODA3NTgyLC0x
+NjgzMDkyNjAzLDk3Nzg2MDU5MywtMjI3MjMwNjIwLDIwOTk0MT
+kwMDgsMTEwMDE3OTYxNCwtMTkyODA5OTQ1NiwtMTk2Njk0MTQ2
+OSwtMTczMDIwMTc3NCwxNTM2NTU1MDA3LDI2NzUxNjYsMTAxOT
+cyOTI1MSwtNDUzOTIxMzMwLDMyMTE5MDg5N119
 -->
