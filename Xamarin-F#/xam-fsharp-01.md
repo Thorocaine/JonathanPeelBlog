@@ -133,7 +133,13 @@ It shows something on the screen.
 # Follow up (XAML)
 Visusal Studio for Mac has F# Xamarin projects (I am jelous). It also allows you to add XAML files to the project.
 
-I am going to right click on my _Forms_ project, and add a file. A
+I am going to right click on my _Forms_ project, and add a file. I am selecting _XML File_ type, and I can rename it later.
+```xml
+<?xml version="1.0" encoding="utf-8"?>  
+<ContentPage xmlns="[http://xamarin.com/schemas/2014/forms](http://xamarin.com/schemas/2014/forms)" xmlns:x="[http://schemas.microsoft.com/winfx/2009/xaml](http://schemas.microsoft.com/winfx/2009/xaml)" xmlns:local="clr-namespace:FXamSharp" x:Class="FXamSharp.MainPage">  
+<Label Text="XAML FILE" VerticalOptions="Center" HorizontalOptions="Center" />  
+</ContentPage>
+```
 
 # Conclusion
 This is the point that I was wanting to get to, and I am happy here. Happy that it can be done, and happy that I have a base project that I can clone and use as a starting point.
@@ -143,9 +149,9 @@ To peruse, copy, or make fun of any of the code, please find it on [GitHub](http
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6ICdYYW1hcmluIEZvcm1zLC
 B3aXRoIEYjJ1xuYXV0aG9yOiBKb25hdGhhbiBQZWVsXG50YWdz
 OiAnWGFtYXJpbiwgWGFtYXJpbi5Gb3JtcywgRiMsIC5OZXQnXG
-4iLCJoaXN0b3J5IjpbLTEzMDMyMjc4NTUsLTE2ODMwOTI2MDMs
-OTc3ODYwNTkzLC0yMjcyMzA2MjAsMjA5OTQxOTAwOCwxMTAwMT
-c5NjE0LC0xOTI4MDk5NDU2LC0xOTY2OTQxNDY5LC0xNzMwMjAx
-Nzc0LDE1MzY1NTUwMDcsMjY3NTE2NiwxMDE5NzI5MjUxLC00NT
-M5MjEzMzAsMzIxMTkwODk3XX0=
+4iLCJoaXN0b3J5IjpbNjUyNDEwNjg1LC0xNjgzMDkyNjAzLDk3
+Nzg2MDU5MywtMjI3MjMwNjIwLDIwOTk0MTkwMDgsMTEwMDE3OT
+YxNCwtMTkyODA5OTQ1NiwtMTk2Njk0MTQ2OSwtMTczMDIwMTc3
+NCwxNTM2NTU1MDA3LDI2NzUxNjYsMTAxOTcyOTI1MSwtNDUzOT
+IxMzMwLDMyMTE5MDg5N119
 -->
