@@ -171,13 +171,17 @@ Editing the project file, remove
 ```
 and remove
 ```
-<EmbeddedResource Remove="XamlPage.xaml" />
+<ItemGroup>
+	<EmbeddedResource Remove="XamlPage.xaml" />
+</ItemGroup>
 ```
  and adding
 ```
+<ItemGroup>
 <Compile Include="MainPage.xaml.fs">  
 	<DependentUpon>MainPage.xaml</DependentUpon>  
 </Compile>
+</ItemGroup>
 ```
 
 
@@ -190,7 +194,7 @@ To peruse, copy, or make fun of any of the code, please find it on [GitHub](http
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6ICdYYW1hcmluIEZvcm1zLC
 B3aXRoIEYjJ1xuYXV0aG9yOiBKb25hdGhhbiBQZWVsXG50YWdz
 OiAnWGFtYXJpbiwgWGFtYXJpbi5Gb3JtcywgRiMsIC5OZXQnXG
-4iLCJoaXN0b3J5IjpbMTYwNTYwODIzOSwxODc2ODA3NTgyLC0x
+4iLCJoaXN0b3J5IjpbLTM1MDY5MTk4OSwxODc2ODA3NTgyLC0x
 NjgzMDkyNjAzLDk3Nzg2MDU5MywtMjI3MjMwNjIwLDIwOTk0MT
 kwMDgsMTEwMDE3OTYxNCwtMTkyODA5OTQ1NiwtMTk2Njk0MTQ2
 OSwtMTczMDIwMTc3NCwxNTM2NTU1MDA3LDI2NzUxNjYsMTAxOT
