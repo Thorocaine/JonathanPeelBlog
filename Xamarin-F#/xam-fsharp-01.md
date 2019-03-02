@@ -133,7 +133,7 @@ It shows something on the screen.
 # Follow up (XAML)
 Visusal Studio for Mac has F# Xamarin projects (I am jelous). It also allows you to add XAML files to the project.
 
-## XAML File
+### XAML File
 Create an XML file in the _Forms_ project, call it `Page2.xaml`
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -145,7 +145,11 @@ Create an XML file in the _Forms_ project, call it `Page2.xaml`
 </ContentPage>
 ```
 
-## FSharp File
+### Code File
+Create an _F#_ file called `Page2.xaml.fs`
+```fsharp
+
+```
 
 Rename the file to `XamlPage.xaml`
 Add an F# file called `XamlPage.xaml.fs`
@@ -197,7 +201,7 @@ To peruse, copy, or make fun of any of the code, please find it on [GitHub](http
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6ICdYYW1hcmluIEZvcm1zLC
 B3aXRoIEYjJ1xuYXV0aG9yOiBKb25hdGhhbiBQZWVsXG50YWdz
 OiAnWGFtYXJpbiwgWGFtYXJpbi5Gb3JtcywgRiMsIC5OZXQnXG
-4iLCJoaXN0b3J5IjpbMTQ0ODM1MTMxMywtMjA4NzIxMzY5NSwx
+4iLCJoaXN0b3J5IjpbLTM1NzE2MjU3MywtMjA4NzIxMzY5NSwx
 ODc2ODA3NTgyLC0xNjgzMDkyNjAzLDk3Nzg2MDU5MywtMjI3Mj
 MwNjIwLDIwOTk0MTkwMDgsMTEwMDE3OTYxNCwtMTkyODA5OTQ1
 NiwtMTk2Njk0MTQ2OSwtMTczMDIwMTc3NCwxNTM2NTU1MDA3LD
