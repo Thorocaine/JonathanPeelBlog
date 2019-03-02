@@ -145,6 +145,8 @@ Create an XML file in the _Forms_ project, call it `Page2.xaml`
 </ContentPage>
 ```
 
+Be sure to add the full namespace in `xmlns:local`, and make sure you have the fully qualified class name in `x:Class`.
+
 ### Code File
 Create an _F#_ file called `Page2.xaml.fs`
 ```fsharp
@@ -173,10 +175,11 @@ To peruse, copy, or make fun of any of the code, please find it on [GitHub](http
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6ICdYYW1hcmluIEZvcm1zLC
 B3aXRoIEYjJ1xuYXV0aG9yOiBKb25hdGhhbiBQZWVsXG50YWdz
 OiAnWGFtYXJpbiwgWGFtYXJpbi5Gb3JtcywgRiMsIC5OZXQnXG
-4iLCJoaXN0b3J5IjpbLTc3OTc1OTg5MSwxMzg5MjAyNjU1LC0y
-MDk0ODAyMzA0LC0yMDg3MjEzNjk1LDE4NzY4MDc1ODIsLTE2OD
-MwOTI2MDMsOTc3ODYwNTkzLC0yMjcyMzA2MjAsMjA5OTQxOTAw
-OCwxMTAwMTc5NjE0LC0xOTI4MDk5NDU2LC0xOTY2OTQxNDY5LC
-0xNzMwMjAxNzc0LDE1MzY1NTUwMDcsMjY3NTE2NiwxMDE5NzI5
-MjUxLC00NTM5MjEzMzAsMzIxMTkwODk3XX0=
+4iLCJoaXN0b3J5IjpbMTU5NTY5NDg5MCwtNzc5NzU5ODkxLDEz
+ODkyMDI2NTUsLTIwOTQ4MDIzMDQsLTIwODcyMTM2OTUsMTg3Nj
+gwNzU4MiwtMTY4MzA5MjYwMyw5Nzc4NjA1OTMsLTIyNzIzMDYy
+MCwyMDk5NDE5MDA4LDExMDAxNzk2MTQsLTE5MjgwOTk0NTYsLT
+E5NjY5NDE0NjksLTE3MzAyMDE3NzQsMTUzNjU1NTAwNywyNjc1
+MTY2LDEwMTk3MjkyNTEsLTQ1MzkyMTMzMCwzMjExOTA4OTddfQ
+==
 -->
