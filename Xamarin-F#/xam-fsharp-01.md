@@ -130,20 +130,22 @@ It builds.
 It runs.  
 It shows something on the screen.
 
+# Follow up (XAML)
+Visusal Studio for Mac has F# Xamarin projects (I am jelous). It also allows you to add XAML files to the project.
+
+I am going to right click on my _Forms_ project, and add a file. A
+
 # Conclusion
 This is the point that I was wanting to get to, and I am happy here. Happy that it can be done, and happy that I have a base project that I can clone and use as a starting point.
 
 To peruse, copy, or make fun of any of the code, please find it on [GitHub](https://github.com/Thorocaine/JonathanPeelBlog/tree/master/Xamarin-F%23/FXam)
-
-# Follow up
-Visusal Studio for Mac has F# Xamarin projects (I am jelous). It also allows you to add XAML files 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6ICdYYW1hcmluIEZvcm1zLC
 B3aXRoIEYjJ1xuYXV0aG9yOiBKb25hdGhhbiBQZWVsXG50YWdz
 OiAnWGFtYXJpbiwgWGFtYXJpbi5Gb3JtcywgRiMsIC5OZXQnXG
-4iLCJoaXN0b3J5IjpbLTM5Njg0NzA4LC0xNjgzMDkyNjAzLDk3
-Nzg2MDU5MywtMjI3MjMwNjIwLDIwOTk0MTkwMDgsMTEwMDE3OT
-YxNCwtMTkyODA5OTQ1NiwtMTk2Njk0MTQ2OSwtMTczMDIwMTc3
-NCwxNTM2NTU1MDA3LDI2NzUxNjYsMTAxOTcyOTI1MSwtNDUzOT
-IxMzMwLDMyMTE5MDg5N119
+4iLCJoaXN0b3J5IjpbLTEzMDMyMjc4NTUsLTE2ODMwOTI2MDMs
+OTc3ODYwNTkzLC0yMjcyMzA2MjAsMjA5OTQxOTAwOCwxMTAwMT
+c5NjE0LC0xOTI4MDk5NDU2LC0xOTY2OTQxNDY5LC0xNzMwMjAx
+Nzc0LDE1MzY1NTUwMDcsMjY3NTE2NiwxMDE5NzI5MjUxLC00NT
+M5MjEzMzAsMzIxMTkwODk3XX0=
 -->
