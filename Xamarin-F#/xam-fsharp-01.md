@@ -134,13 +134,16 @@ It shows something on the screen.
 This is the point that I was wanting to get to, and I am happy here. Happy that it can be done, and happy that I have a base project that I can clone and use as a starting point.
 
 To peruse, copy, or make fun of any of the code, please find it on [GitHub](https://github.com/Thorocaine/JonathanPeelBlog/tree/master/Xamarin-F%23/FXam)
+
+# Follow up
+Visusal Studio for Mac has F# Xamarin projects (I am jelous). It also allows you to add XAML files 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6ICdYYW1hcmluIEZvcm1zLC
 B3aXRoIEYjJ1xuYXV0aG9yOiBKb25hdGhhbiBQZWVsXG50YWdz
 OiAnWGFtYXJpbiwgWGFtYXJpbi5Gb3JtcywgRiMsIC5OZXQnXG
-4iLCJoaXN0b3J5IjpbLTE2ODMwOTI2MDMsOTc3ODYwNTkzLC0y
-MjcyMzA2MjAsMjA5OTQxOTAwOCwxMTAwMTc5NjE0LC0xOTI4MD
-k5NDU2LC0xOTY2OTQxNDY5LC0xNzMwMjAxNzc0LDE1MzY1NTUw
-MDcsMjY3NTE2NiwxMDE5NzI5MjUxLC00NTM5MjEzMzAsMzIxMT
-kwODk3XX0=
+4iLCJoaXN0b3J5IjpbLTM5Njg0NzA4LC0xNjgzMDkyNjAzLDk3
+Nzg2MDU5MywtMjI3MjMwNjIwLDIwOTk0MTkwMDgsMTEwMDE3OT
+YxNCwtMTkyODA5OTQ1NiwtMTk2Njk0MTQ2OSwtMTczMDIwMTc3
+NCwxNTM2NTU1MDA3LDI2NzUxNjYsMTAxOTcyOTI1MSwtNDUzOT
+IxMzMwLDMyMTE5MDg5N119
 -->
