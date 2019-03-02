@@ -162,7 +162,7 @@ type Page2() =
 Set the application main page to `Page`, in `App.fs`
 ```fsharp
 type App () =
-    inherit Application (MainPage = new Page1 ())
+    inherit Application (MainPage = new Page2 ())
 ```
 
 
@@ -216,10 +216,10 @@ To peruse, copy, or make fun of any of the code, please find it on [GitHub](http
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6ICdYYW1hcmluIEZvcm1zLC
 B3aXRoIEYjJ1xuYXV0aG9yOiBKb25hdGhhbiBQZWVsXG50YWdz
 OiAnWGFtYXJpbiwgWGFtYXJpbi5Gb3JtcywgRiMsIC5OZXQnXG
-4iLCJoaXN0b3J5IjpbLTIwOTQ4MDIzMDQsLTIwODcyMTM2OTUs
-MTg3NjgwNzU4MiwtMTY4MzA5MjYwMyw5Nzc4NjA1OTMsLTIyNz
-IzMDYyMCwyMDk5NDE5MDA4LDExMDAxNzk2MTQsLTE5MjgwOTk0
-NTYsLTE5NjY5NDE0NjksLTE3MzAyMDE3NzQsMTUzNjU1NTAwNy
-wyNjc1MTY2LDEwMTk3MjkyNTEsLTQ1MzkyMTMzMCwzMjExOTA4
-OTddfQ==
+4iLCJoaXN0b3J5IjpbMTM4OTIwMjY1NSwtMjA5NDgwMjMwNCwt
+MjA4NzIxMzY5NSwxODc2ODA3NTgyLC0xNjgzMDkyNjAzLDk3Nz
+g2MDU5MywtMjI3MjMwNjIwLDIwOTk0MTkwMDgsMTEwMDE3OTYx
+NCwtMTkyODA5OTQ1NiwtMTk2Njk0MTQ2OSwtMTczMDIwMTc3NC
+wxNTM2NTU1MDA3LDI2NzUxNjYsMTAxOTcyOTI1MSwtNDUzOTIx
+MzMwLDMyMTE5MDg5N119
 -->
