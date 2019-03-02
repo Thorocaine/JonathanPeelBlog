@@ -5,12 +5,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="Page2.xaml.fs" />
     <Compile Include="Page1.fs" />
     <Compile Include="App.fs" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="3.4.0.1009999" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Page2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>
