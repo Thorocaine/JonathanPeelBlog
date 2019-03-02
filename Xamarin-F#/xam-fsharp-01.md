@@ -143,6 +143,16 @@ I am going to right click on my _Forms_ project, and add a file. I am selecting 
 
 Rename the file to `XamlPage.xaml`
 Add an F# file called `XamlPage.xaml.fs`
+```fsharp
+namespace FXamSharp
+
+open Xamarin.Forms
+open Xamarin.Forms.Xaml
+
+type MainPage() =
+   inherit ContentPage()
+   let _ = base.LoadFromXaml(typeof<MainPage>)
+```
 
 # Conclusion
 This is the point that I was wanting to get to, and I am happy here. Happy that it can be done, and happy that I have a base project that I can clone and use as a starting point.
@@ -152,9 +162,9 @@ To peruse, copy, or make fun of any of the code, please find it on [GitHub](http
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6ICdYYW1hcmluIEZvcm1zLC
 B3aXRoIEYjJ1xuYXV0aG9yOiBKb25hdGhhbiBQZWVsXG50YWdz
 OiAnWGFtYXJpbiwgWGFtYXJpbi5Gb3JtcywgRiMsIC5OZXQnXG
-4iLCJoaXN0b3J5IjpbLTk4NzUzMzIyOCwtMTY4MzA5MjYwMyw5
-Nzc4NjA1OTMsLTIyNzIzMDYyMCwyMDk5NDE5MDA4LDExMDAxNz
-k2MTQsLTE5MjgwOTk0NTYsLTE5NjY5NDE0NjksLTE3MzAyMDE3
-NzQsMTUzNjU1NTAwNywyNjc1MTY2LDEwMTk3MjkyNTEsLTQ1Mz
-kyMTMzMCwzMjExOTA4OTddfQ==
+4iLCJoaXN0b3J5IjpbLTIxMzQyMDk0MzksLTE2ODMwOTI2MDMs
+OTc3ODYwNTkzLC0yMjcyMzA2MjAsMjA5OTQxOTAwOCwxMTAwMT
+c5NjE0LC0xOTI4MDk5NDU2LC0xOTY2OTQxNDY5LC0xNzMwMjAx
+Nzc0LDE1MzY1NTUwMDcsMjY3NTE2NiwxMDE5NzI5MjUxLC00NT
+M5MjEzMzAsMzIxMTkwODk3XX0=
 -->
