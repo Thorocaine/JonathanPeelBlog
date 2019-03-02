@@ -145,16 +145,7 @@ Create an XML file in the _Forms_ project, call it `Page2.xaml`
 </ContentPage>
 ```
 
-I am going to right click on my _Forms_ project, and add a file. I am selecting _XML File_ type, and I can rename it later.
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="[http://xamarin.com/schemas/2014/forms](http://xamarin.com/schemas/2014/forms)"
-             xmlns:x="[http://schemas.microsoft.com/winfx/2009/xaml](http://schemas.microsoft.com/winfx/2009/xaml)"
-             xmlns:local="clr-namespace:Jon.FXam"
-             x:Class="XamlPage">
-  <Label Text="XAML FILE" VerticalOptions="Center" HorizontalOptions="Center" />
-</ContentPage>
-```
+## FSharp File
 
 Rename the file to `XamlPage.xaml`
 Add an F# file called `XamlPage.xaml.fs`
@@ -206,10 +197,10 @@ To peruse, copy, or make fun of any of the code, please find it on [GitHub](http
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6ICdYYW1hcmluIEZvcm1zLC
 B3aXRoIEYjJ1xuYXV0aG9yOiBKb25hdGhhbiBQZWVsXG50YWdz
 OiAnWGFtYXJpbiwgWGFtYXJpbi5Gb3JtcywgRiMsIC5OZXQnXG
-4iLCJoaXN0b3J5IjpbLTE2MzA0ODY5MTgsLTIwODcyMTM2OTUs
-MTg3NjgwNzU4MiwtMTY4MzA5MjYwMyw5Nzc4NjA1OTMsLTIyNz
-IzMDYyMCwyMDk5NDE5MDA4LDExMDAxNzk2MTQsLTE5MjgwOTk0
-NTYsLTE5NjY5NDE0NjksLTE3MzAyMDE3NzQsMTUzNjU1NTAwNy
-wyNjc1MTY2LDEwMTk3MjkyNTEsLTQ1MzkyMTMzMCwzMjExOTA4
-OTddfQ==
+4iLCJoaXN0b3J5IjpbMTQ0ODM1MTMxMywtMjA4NzIxMzY5NSwx
+ODc2ODA3NTgyLC0xNjgzMDkyNjAzLDk3Nzg2MDU5MywtMjI3Mj
+MwNjIwLDIwOTk0MTkwMDgsMTEwMDE3OTYxNCwtMTkyODA5OTQ1
+NiwtMTk2Njk0MTQ2OSwtMTczMDIwMTc3NCwxNTM2NTU1MDA3LD
+I2NzUxNjYsMTAxOTcyOTI1MSwtNDUzOTIxMzMwLDMyMTE5MDg5
+N119
 -->
