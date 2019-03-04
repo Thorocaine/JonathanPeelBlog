@@ -43,8 +43,31 @@ I make a copy of `Page2.xaml[.fs]` and rename it to `MyReactiveView.xaml[.fs]`.
 The page needs to inherit from `ReactiveContentPage<T>` instead of the Xamlarin built in `ContentPage`. It also needs a type paramter that will point to the View Model. I also want to keep the label, but this time, instead of giving a default messgae I give it a name, to use for binding in the "code behind".
 
 `MyReactiveView.xaml` now looks like this
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<rxFroms:ReactiveContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                             xmlns:rxFroms="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
+                             xmlns:local="clr-namespace:Jon.FXamRx"
+                             x:Class="Jon.FXamRx.MyReactiveView"
+                             x:TypeArguments="local:MyReactiveViewModel">
+    <Label x:Name="Message" VerticalOptions="Center" HorizontalOptions="Center" />
+</rxFroms:ReactiveContentPage>
+```
+
+In `MyReactiveView.xaml.fs`  we just have to rename the type;
+```fsharp
+namespace Jon.FXamRx
+
+open Xamarin.Forms
+open Xamarin.Forms.Xaml
+
+type MyReactiveView() =
+   inherit ContentPage()
+   let _ = base.LoadFromXaml(typeof<MyReactiveView>)
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjE4Mzk0NDQsNjkwMDM1MTg1LDE1ND
-Q1OTczMTEsMTAzNzc4NDU1OSwtMTUxOTkwMDg0LC0xODczMjA2
-NTk2XX0=
+eyJoaXN0b3J5IjpbLTE5MTIwMDY5MTEsLTE3NjE4Mzk0NDQsNj
+kwMDM1MTg1LDE1NDQ1OTczMTEsMTAzNzc4NDU1OSwtMTUxOTkw
+MDg0LC0xODczMjA2NTk2XX0=
 -->
