@@ -17,8 +17,8 @@ Right click on the solution and select _Manage NuGet Pacgaes for Solution_, Sear
 ## Create a ViewModel
 In the `Xamarin.Forms` project create a code file called `MyReactiveViewModel.fs`
 
-
+Our viewmodel needs to inherit from `ReactiveObject` and `IRoutableViewModel`. It needs an `IScreen` (this is what ReactiveUI uses for switching between views and view models).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTU2NTkyNSwxNTQ0NTk3MzExLDEwMz
+eyJoaXN0b3J5IjpbMTIwODAyODE0MSwxNTQ0NTk3MzExLDEwMz
 c3ODQ1NTksLTE1MTk5MDA4NCwtMTg3MzIwNjU5Nl19
 -->
