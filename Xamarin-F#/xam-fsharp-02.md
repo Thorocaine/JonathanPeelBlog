@@ -56,7 +56,7 @@ The page needs to inherit from `ReactiveContentPage<T>` instead of the Xamlarin 
 </rxFroms:ReactiveContentPage>
 ```
 
-In `MyReactiveView.xaml.fs`  we just have to rename the type;
+In `MyReactiveView.xaml.fs`  we just have to rename the type, and inherit from `ReactiveContentPage`
 ```fsharp
 namespace Jon.FXamRx
 
@@ -78,7 +78,7 @@ In here we need to set up a very basic service locator. We will use `Splat` beca
 We need to connect `AppBootstrapper` to `IScreen`, and we need to connect our View to out View Model. We also need a small function that will create out MainPage.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDc1MzIwMDgsLTEyOTYyMjI3NzcsLT
-E3NjE4Mzk0NDQsNjkwMDM1MTg1LDE1NDQ1OTczMTEsMTAzNzc4
-NDU1OSwtMTUxOTkwMDg0LC0xODczMjA2NTk2XX0=
+eyJoaXN0b3J5IjpbLTQ2ODU4NTc0MCwtMTI5NjIyMjc3NywtMT
+c2MTgzOTQ0NCw2OTAwMzUxODUsMTU0NDU5NzMxMSwxMDM3Nzg0
+NTU5LC0xNTE5OTAwODQsLTE4NzMyMDY1OTZdfQ==
 -->
