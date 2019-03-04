@@ -100,11 +100,16 @@ type AppBootstrapper () as this =
 ## App.fs
 `App.fs` just needs to be wired up to create the Bootsrapper and grab the Main Page.
 ```fsharp
+namespace Jon.FXamRx
 
+open Xamarin.Forms
+
+type App () =
+    inherit Application (MainPage = AppBootstrapper().CreateMainPage())
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3Mjg3MzIyLC00MzcxODkzNTEsLTQ2OD
-U4NTc0MCwtMTI5NjIyMjc3NywtMTc2MTgzOTQ0NCw2OTAwMzUx
-ODUsMTU0NDU5NzMxMSwxMDM3Nzg0NTU5LC0xNTE5OTAwODQsLT
-E4NzMyMDY1OTZdfQ==
+eyJoaXN0b3J5IjpbLTE0Mzc5MjY0MzMsMTg3Mjg3MzIyLC00Mz
+cxODkzNTEsLTQ2ODU4NTc0MCwtMTI5NjIyMjc3NywtMTc2MTgz
+OTQ0NCw2OTAwMzUxODUsMTU0NDU5NzMxMSwxMDM3Nzg0NTU5LC
+0xNTE5OTAwODQsLTE4NzMyMDY1OTZdfQ==
 -->
