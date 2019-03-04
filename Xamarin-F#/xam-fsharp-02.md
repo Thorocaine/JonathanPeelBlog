@@ -72,9 +72,10 @@ This is not going to just run, because we need to first tell the app what that "
 
 In ReactiveUI, it is common to use an AppBootstrapper. This also acts as out `IScreen` that gets sent to the View Model.
 
-
+We create a new code file called `AppBootstrapper.fs`.  
+In here we need to set up a very basic service locator. We will use `Splat` because it bundles with ReactiveUI. It might not be my favorite in some regards
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2NDEwMzM3NSwtMTc2MTgzOTQ0NCw2OT
+eyJoaXN0b3J5IjpbLTMyNzg5NjAzMSwtMTc2MTgzOTQ0NCw2OT
 AwMzUxODUsMTU0NDU5NzMxMSwxMDM3Nzg0NTU5LC0xNTE5OTAw
 ODQsLTE4NzMyMDY1OTZdfQ==
 -->
