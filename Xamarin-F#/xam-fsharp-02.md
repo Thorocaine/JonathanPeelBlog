@@ -66,8 +66,13 @@ type MyReactiveView() =
    inherit ContentPage()
    let _ = base.LoadFromXaml(typeof<MyReactiveView>)
 ```
+
+## AppBootstrapper
+This is not going to just run, because we need to first tell the app what that "MainPage" is.
+
+In ReactiveUI, it is common to use an AppBoor
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTIwMDY5MTEsLTE3NjE4Mzk0NDQsNj
-kwMDM1MTg1LDE1NDQ1OTczMTEsMTAzNzc4NDU1OSwtMTUxOTkw
-MDg0LC0xODczMjA2NTk2XX0=
+eyJoaXN0b3J5IjpbMTQ3Nzk0OTI2NywtMTc2MTgzOTQ0NCw2OT
+AwMzUxODUsMTU0NDU5NzMxMSwxMDM3Nzg0NTU5LC0xNTE5OTAw
+ODQsLTE4NzMyMDY1OTZdfQ==
 -->
