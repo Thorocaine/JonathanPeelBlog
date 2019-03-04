@@ -40,8 +40,8 @@ I am going to delete `Page1.fs`, I got the xaml page working, so I am not going 
 
 I make a copy of `Page2.xaml[.fs]` and rename it to `MyReactiveView.xaml[.fs]`.
 
-The page needs to inherit from `ReactiveContentPage<T>` instead of the Xamlarin built in `ContentPage`. This is because it is already hooked up to manage some of the M
+The page needs to inherit from `ReactiveContentPage<T>` instead of the Xamlarin built in `ContentPage`. It also needs a type paramter that will point to the View Model. `MyReactiveView.xaml` now looks like this
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzcyOTM3NDAsMTU0NDU5NzMxMSwxMD
-M3Nzg0NTU5LC0xNTE5OTAwODQsLTE4NzMyMDY1OTZdfQ==
+eyJoaXN0b3J5IjpbNjkwMDM1MTg1LDE1NDQ1OTczMTEsMTAzNz
+c4NDU1OSwtMTUxOTkwMDg0LC0xODczMjA2NTk2XX0=
 -->
