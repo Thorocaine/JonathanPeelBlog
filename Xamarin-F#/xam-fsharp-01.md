@@ -137,13 +137,15 @@ Visusal Studio for Mac has F# Xamarin projects (I am jelous). It also allows you
 Create an XML file in the _Forms_ project, call it `Page2.xaml`
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="[http://xamarin.com/schemas/2014/forms](http://xamarin.com/schemas/2014/forms)"
-             xmlns:x="[http://schemas.microsoft.com/winfx/2009/xaml](http://schemas.microsoft.com/winfx/2009/xaml)"
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Jon.FXam"
              x:Class="Jon.FXam.Page2">
-  <Label Text="Welcome to F# & Xamarin Forms, now with XAML!!!" VerticalOptions="Center" HorizontalOptions="Center" />
+    <Label Text="Welcome to F# &amp; Xamarin Forms, now with XAML!!!" VerticalOptions="Center" HorizontalOptions="Center" />
 </ContentPage>
 ```
+
+Be sure to add the full namespace in `xmlns:local`, and make sure you have the fully qualified class name in `x:Class`.
 
 ### Code File
 Create an _F#_ file called `Page2.xaml.fs`
@@ -165,48 +167,7 @@ type App () =
     inherit Application (MainPage = new Page2 ())
 ```
 
-
-Rename the file to `XamlPage.xaml`
-Add an F# file called `XamlPage.xaml.fs`
-```fsharp
-namespace Jon.FXam
-
-open Xamarin.Forms
-open Xamarin.Forms.Xaml
-
-type XamlPage() =
-   inherit ContentPage()
-   let _ = base.LoadFromXaml(typeof<XamlPage>)
-```
-
-To load the XAML file, we need to change `App.fs`
-```fsharp
-type App () =
-    inherit Application (MainPage = new XamlPage ())
-```
-
-This builds, but it does not run. We need to tell the project, what to do with the XAML file.  
-Editing the project file, remove
-```
-<Compile Include="XamlPage.xaml.fs" />
-<Content Include="XamlPage.xaml" />
-```
-and remove
-```
-<ItemGroup>
-	<EmbeddedResource Remove="XamlPage.xaml" />
-</ItemGroup>
-```
- and adding
-```
-<ItemGroup>
-	<Compile Include="XamlPage.xaml.fs">  
-		<DependentUpon>XamlPage.xaml</DependentUpon>  
-	</Compile>
-</ItemGroup>
-```
-
-
+This base XAML page can now be coppied if more XAML pages are needed.
 
 # Conclusion
 This is the point that I was wanting to get to, and I am happy here. Happy that it can be done, and happy that I have a base project that I can clone and use as a starting point.
@@ -216,10 +177,10 @@ To peruse, copy, or make fun of any of the code, please find it on [GitHub](http
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6ICdYYW1hcmluIEZvcm1zLC
 B3aXRoIEYjJ1xuYXV0aG9yOiBKb25hdGhhbiBQZWVsXG50YWdz
 OiAnWGFtYXJpbiwgWGFtYXJpbi5Gb3JtcywgRiMsIC5OZXQnXG
-4iLCJoaXN0b3J5IjpbMTM4OTIwMjY1NSwtMjA5NDgwMjMwNCwt
-MjA4NzIxMzY5NSwxODc2ODA3NTgyLC0xNjgzMDkyNjAzLDk3Nz
-g2MDU5MywtMjI3MjMwNjIwLDIwOTk0MTkwMDgsMTEwMDE3OTYx
-NCwtMTkyODA5OTQ1NiwtMTk2Njk0MTQ2OSwtMTczMDIwMTc3NC
-wxNTM2NTU1MDA3LDI2NzUxNjYsMTAxOTcyOTI1MSwtNDUzOTIx
-MzMwLDMyMTE5MDg5N119
+4iLCJoaXN0b3J5IjpbOTYyMzAwMTg2LC03Nzk3NTk4OTEsMTM4
+OTIwMjY1NSwtMjA5NDgwMjMwNCwtMjA4NzIxMzY5NSwxODc2OD
+A3NTgyLC0xNjgzMDkyNjAzLDk3Nzg2MDU5MywtMjI3MjMwNjIw
+LDIwOTk0MTkwMDgsMTEwMDE3OTYxNCwtMTkyODA5OTQ1NiwtMT
+k2Njk0MTQ2OSwtMTczMDIwMTc3NCwxNTM2NTU1MDA3LDI2NzUx
+NjYsMTAxOTcyOTI1MSwtNDUzOTIxMzMwLDMyMTE5MDg5N119
 -->
