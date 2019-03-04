@@ -19,8 +19,27 @@ In the `Xamarin.Forms` project create a code file called `MyReactiveViewModel.fs
 
 Our viewmodel needs to inherit from `ReactiveObject` and `IRoutableViewModel`. It needs an `IScreen` (this is what ReactiveUI uses for switching between views and view models).
 
-I am also going to add a message for now. This will be static, I want to get the basics working, then I will expand on it., s
+I am also going to add a message for now. This will be static, I want to get the basics working, then I will expand on it., so `MyReactiveViewModel.fs` ends up being
+```fsharp
+namespace Jon.FXamRx
+
+open ReactiveUI
+
+type MyReactiveViewModel (hostScreen: IScreen) =
+    inherit ReactiveObject()
+
+    member this.Message = "Welcom to a basic MVVM"
+        
+    interface IRoutableViewModel with
+        member this.HostScreen: IScreen = hostScreen
+        member this.UrlPathSegment: string = ""
+```
+
+## Create a View
+I am going to delete `Page1.fs`, I got the xaml page working, so I am not going to keep the old coded page. If you prefer using coded pages, please use it, but I am not going to show that here.
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjcwMDI5MjMsMTU0NDU5NzMxMSwxMD
-M3Nzg0NTU5LC0xNTE5OTAwODQsLTE4NzMyMDY1OTZdfQ==
+eyJoaXN0b3J5IjpbMTkxODU0NzExMCwxNTQ0NTk3MzExLDEwMz
+c3ODQ1NTksLTE1MTk5MDA4NCwtMTg3MzIwNjU5Nl19
 -->
