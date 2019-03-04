@@ -16,7 +16,9 @@ Right click on the solution and select _Manage NuGet Pacgaes for Solution_, Sear
 
 ## Create a ViewModel
 In the `Xamarin.Forms` project create a code file called `MyReactiveViewModel.fs`
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0NDU5NzMxMSwxMDM3Nzg0NTU5LC0xNT
-E5OTAwODQsLTE4NzMyMDY1OTZdfQ==
+eyJoaXN0b3J5IjpbLTE1NTU2NTkyNSwxNTQ0NTk3MzExLDEwMz
+c3ODQ1NTksLTE1MTk5MDA4NCwtMTg3MzIwNjU5Nl19
 -->
