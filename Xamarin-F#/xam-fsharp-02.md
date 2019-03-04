@@ -60,12 +60,12 @@ In `MyReactiveView.xaml.fs`  we just have to rename the type, and inherit from `
 ```fsharp
 namespace Jon.FXamRx
 
-open Xamarin.Forms
+open ReactiveUI.XamForms
 open Xamarin.Forms.Xaml
 
-type MyReactiveView() =
-   inherit ContentPage()
-   let _ = base.LoadFromXaml(typeof<MyReactiveView>)
+type MyReactiveView () =
+    inherit ReactiveContentPage<MyReactiveViewModel> ()
+    let _ = base.LoadFromXaml(typeof<MyReactiveView>)
 ```
 
 ## AppBootstrapper
@@ -78,7 +78,8 @@ In here we need to set up a very basic service locator. We will use `Splat` beca
 We need to connect `AppBootstrapper` to `IScreen`, and we need to connect our View to out View Model. We also need a small function that will create out MainPage.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2ODU4NTc0MCwtMTI5NjIyMjc3NywtMT
-c2MTgzOTQ0NCw2OTAwMzUxODUsMTU0NDU5NzMxMSwxMDM3Nzg0
-NTU5LC0xNTE5OTAwODQsLTE4NzMyMDY1OTZdfQ==
+eyJoaXN0b3J5IjpbLTQzNzE4OTM1MSwtNDY4NTg1NzQwLC0xMj
+k2MjIyNzc3LC0xNzYxODM5NDQ0LDY5MDAzNTE4NSwxNTQ0NTk3
+MzExLDEwMzc3ODQ1NTksLTE1MTk5MDA4NCwtMTg3MzIwNjU5Nl
+19
 -->
