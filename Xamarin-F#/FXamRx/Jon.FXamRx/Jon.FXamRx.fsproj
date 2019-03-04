@@ -6,11 +6,13 @@
 
   <ItemGroup>
     <Compile Include="Page2.xaml.fs" />
+    <Compile Include="MyReactiveViewModel.fs" />
     <Compile Include="Page1.fs" />
     <Compile Include="App.fs" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="ReactiveUI.XamForms" Version="9.11.1" />
     <PackageReference Include="Xamarin.Forms" Version="3.5.0.169047" />
   </ItemGroup>
 
