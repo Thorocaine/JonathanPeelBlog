@@ -76,10 +76,35 @@ In ReactiveUI, it is common to use an AppBootstrapper. This also acts as out `IS
 We create a new code file called `AppBootstrapper.fs`.  
 In here we need to set up a very basic service locator. We will use `Splat` because it bundles with ReactiveUI. It might not be my favorite in some regards, but it is very quick to get going, and for a small project it does the job.
 We need to connect `AppBootstrapper` to `IScreen`, and we need to connect our View to out View Model. We also need a small function that will create out MainPage.
+```fsharp
+namespace Jon.FXamRx
+
+open ReactiveUI
+open Splat
+open ReactiveUI.XamForms
+
+type AppBootstrapper () as this =
+    inherit ReactiveObject ()
+
+    let locator = Locator.CurrentMutable
+    do
+        locator.RegisterConstant (this :> IScreen)
+        locator.Register(fun _ -> MyReactiveView() :> IViewFor<MyReactiveViewModel> )
+
+    interface IScreen with
+        member this.Router = RoutingState ()
+
+    member this.CreateMainPage () = RoutedViewHost()
+```
+
+## App.fs
+`App.fs` just needs to be wired up to create the Bootsrapper and grab the Main Page.
+```fsharp
+
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3MTk5OTQxOSwtNDM3MTg5MzUxLC00Nj
-g1ODU3NDAsLTEyOTYyMjI3NzcsLTE3NjE4Mzk0NDQsNjkwMDM1
-MTg1LDE1NDQ1OTczMTEsMTAzNzc4NDU1OSwtMTUxOTkwMDg0LC
-0xODczMjA2NTk2XX0=
+eyJoaXN0b3J5IjpbMTg3Mjg3MzIyLC00MzcxODkzNTEsLTQ2OD
+U4NTc0MCwtMTI5NjIyMjc3NywtMTc2MTgzOTQ0NCw2OTAwMzUx
+ODUsMTU0NDU5NzMxMSwxMDM3Nzg0NTU5LC0xNTE5OTAwODQsLT
+E4NzMyMDY1OTZdfQ==
 -->
