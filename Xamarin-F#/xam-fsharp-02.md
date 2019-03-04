@@ -38,8 +38,10 @@ type MyReactiveViewModel (hostScreen: IScreen) =
 ## Create a View
 I am going to delete `Page1.fs`, I got the xaml page working, so I am not going to keep the old coded page. If you prefer using coded pages, please use it, but I am not going to show that here.
 
+I make a copy of `Page2.xaml[.fs]` and rename it to `MyReactiveView.xaml[.fs]`.
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxODU0NzExMCwxNTQ0NTk3MzExLDEwMz
+eyJoaXN0b3J5IjpbLTI1NzE0MDMwMiwxNTQ0NTk3MzExLDEwMz
 c3ODQ1NTksLTE1MTk5MDA4NCwtMTg3MzIwNjU5Nl19
 -->
