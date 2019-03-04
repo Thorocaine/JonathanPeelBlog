@@ -14,8 +14,9 @@ ReactiveUI is an [MVVM](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%9
 ## Add ReactiveUI
 Right click on the solution and select _Manage NuGet Pacgaes for Solution_, Search for [ReactiveUI.XamForms](https://www.nuget.org/packages/ReactiveUI.XamForms) and add it to both projects.
 
-#
+## Create a ViewModel
+In the `Xamarin.Forms` project create a code file called `MyReactiveViewModel.fs`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTczMDMxNDYyLDEwMzc3ODQ1NTksLTE1MT
-k5MDA4NCwtMTg3MzIwNjU5Nl19
+eyJoaXN0b3J5IjpbMTU0NDU5NzMxMSwxMDM3Nzg0NTU5LC0xNT
+E5OTAwODQsLTE4NzMyMDY1OTZdfQ==
 -->
