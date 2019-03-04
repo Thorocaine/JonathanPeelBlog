@@ -70,9 +70,11 @@ type MyReactiveView() =
 ## AppBootstrapper
 This is not going to just run, because we need to first tell the app what that "MainPage" is.
 
-In ReactiveUI, it is common to use an AppBoor
+In ReactiveUI, it is common to use an AppBootstrapper. This also acts as out `IScreen` that gets sent to the View Model.
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3Nzk0OTI2NywtMTc2MTgzOTQ0NCw2OT
+eyJoaXN0b3J5IjpbLTg2NDEwMzM3NSwtMTc2MTgzOTQ0NCw2OT
 AwMzUxODUsMTU0NDU5NzMxMSwxMDM3Nzg0NTU5LC0xNTE5OTAw
 ODQsLTE4NzMyMDY1OTZdfQ==
 -->
