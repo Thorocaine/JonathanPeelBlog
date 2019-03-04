@@ -24,14 +24,15 @@ I am also going to add a message for now. This will be static, I want to get the
 namespace Jon.FXamRx
 
 open ReactiveUI
+open Splat
 
-type MyReactiveViewModel (hostScreen: IScreen) =
+type MyReactiveViewModel (?hostScreen: IScreen) =
     inherit ReactiveObject()
 
     member this.Message = "Welcom to a basic MVVM"
-        
+
     interface IRoutableViewModel with
-        member this.HostScreen: IScreen = hostScreen
+        member this.HostScreen: IScreen = if hostScreen.IsSome then hostScreen.Value else Locator.Current.GetService<IScreen>()
         member this.UrlPathSegment: string = ""
 ```
 
@@ -77,7 +78,7 @@ In here we need to set up a very basic service locator. We will use `Splat` beca
 We need to connect `AppBootstrapper` to `IScreen`, and we need to connect our View to out View Model. We also need a small function that will create out MainPage.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTYyMjI3NzcsLTE3NjE4Mzk0NDQsNj
-kwMDM1MTg1LDE1NDQ1OTczMTEsMTAzNzc4NDU1OSwtMTUxOTkw
-MDg0LC0xODczMjA2NTk2XX0=
+eyJoaXN0b3J5IjpbLTE1MDc1MzIwMDgsLTEyOTYyMjI3NzcsLT
+E3NjE4Mzk0NDQsNjkwMDM1MTg1LDE1NDQ1OTczMTEsMTAzNzc4
+NDU1OSwtMTUxOTkwMDg0LC0xODczMjA2NTk2XX0=
 -->
