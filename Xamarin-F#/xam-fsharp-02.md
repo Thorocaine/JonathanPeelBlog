@@ -56,17 +56,28 @@ The page needs to inherit from `ReactiveContentPage<T>` instead of the Xamlarin 
 </rxFroms:ReactiveContentPage>
 ```
 
-In `MyReactiveView.xaml.fs`  we just have to rename the type, and inherit from `ReactiveContentPage`
+In `MyReactiveView.xaml.fs`  we just have to rename the type, inherit from `ReactiveContentPage`, and bind the control to the View Model
 ```fsharp
 namespace Jon.FXamRx
 
 open ReactiveUI.XamForms
 open Xamarin.Forms.Xaml
+open ReactiveUI
+open Xamarin.Forms
 
-type MyReactiveView () =
+type MyReactiveView () as this =
     inherit ReactiveContentPage<MyReactiveViewModel> ()
     let _ = base.LoadFromXaml(typeof<MyReactiveView>)
+    let message = base.FindByName<Label>("Message")
+
+    override __.OnAppearing() =
+        base.OnAppearing()
+        this.OneWayBind (this.ViewModel, (fun vm -> vm.Message), (fun v -> (v.Message : Label).Text)) |> ignore
+
+    member val Message = message with get
 ```
+
+I know that I am ignoring a subscription, and this should be disposed, but for now I am not goi
 
 ## AppBootstrapper
 This is not going to just run, because we need to first tell the app what that "MainPage" is.
@@ -108,8 +119,8 @@ type App () =
     inherit Application (MainPage = AppBootstrapper().CreateMainPage())
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0Mzc5MjY0MzMsMTg3Mjg3MzIyLC00Mz
-cxODkzNTEsLTQ2ODU4NTc0MCwtMTI5NjIyMjc3NywtMTc2MTgz
-OTQ0NCw2OTAwMzUxODUsMTU0NDU5NzMxMSwxMDM3Nzg0NTU5LC
-0xNTE5OTAwODQsLTE4NzMyMDY1OTZdfQ==
+eyJoaXN0b3J5IjpbMTYxODA3Mjc1MiwtMTQzNzkyNjQzMywxOD
+cyODczMjIsLTQzNzE4OTM1MSwtNDY4NTg1NzQwLC0xMjk2MjIy
+Nzc3LC0xNzYxODM5NDQ0LDY5MDAzNTE4NSwxNTQ0NTk3MzExLD
+EwMzc3ODQ1NTksLTE1MTk5MDA4NCwtMTg3MzIwNjU5Nl19
 -->
