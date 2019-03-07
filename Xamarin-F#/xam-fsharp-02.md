@@ -16,7 +16,125 @@ Right click on the solution and select _Manage NuGet Pacgaes for Solution_, Sear
 
 ## Create a ViewModel
 In the `Xamarin.Forms` project create a code file called `MyReactiveViewModel.fs`
+
+Our viewmodel needs to inherit from `ReactiveObject` and `IRoutableViewModel`. It needs an `IScreen` (this is what ReactiveUI uses for switching between views and view models).
+
+I am also going to add a message for now. This will be static, I want to get the basics working, then I will expand on it., so `MyReactiveViewModel.fs` ends up being
+```fsharp
+namespace Jon.FXamRx
+
+open ReactiveUI
+open Splat
+
+type MyReactiveViewModel (?hostScreen: IScreen) =
+    inherit ReactiveObject()
+    new() = MyReactiveViewModel(null)
+
+    member this.Message = "Welcom to a basic MVVM"
+
+    interface IRoutableViewModel with
+        member this.HostScreen: IScreen = if hostScreen.IsSome then hostScreen.Value else Locator.Current.GetService<IScreen>()
+        member this.UrlPathSegment: string = ""
+```
+
+## Create a View
+I am going to delete `Page1.fs`, I got the xaml page working, so I am not going to keep the old coded page. If you prefer using coded pages, please use it, but I am not going to show that here.
+
+I make a copy of `Page2.xaml[.fs]` and rename it to `MyReactiveView.xaml[.fs]`.
+
+The page needs to inherit from `ReactiveContentPage<T>` instead of the Xamlarin built in `ContentPage`. It also needs a type paramter that will point to the View Model. I also want to keep the label, but this time, instead of giving a default messgae I give it a name, to use for binding in the "code behind".
+
+`MyReactiveView.xaml` now looks like this
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<rxFroms:ReactiveContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                             xmlns:rxFroms="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
+                             xmlns:local="clr-namespace:Jon.FXamRx"
+                             x:Class="Jon.FXamRx.MyReactiveView"
+                             x:TypeArguments="local:MyReactiveViewModel">
+    <Label x:Name="Message" VerticalOptions="Center" HorizontalOptions="Center" />
+</rxFroms:ReactiveContentPage>
+```
+
+In `MyReactiveView.xaml.fs`  we just have to rename the type, inherit from `ReactiveContentPage`, and bind the control to the View Model
+```fsharp
+namespace Jon.FXamRx
+
+open ReactiveUI.XamForms
+open Xamarin.Forms.Xaml
+open ReactiveUI
+open Xamarin.Forms
+
+type MyReactiveView () as this =
+    inherit ReactiveContentPage<MyReactiveViewModel> ()
+    let _ = base.LoadFromXaml(typeof<MyReactiveView>)
+    let message = base.FindByName<Label>("Message")
+
+    override __.OnAppearing() =
+        base.OnAppearing()
+        this.OneWayBind (this.ViewModel, (fun vm -> vm.Message), (fun v -> (v.Message : Label).Text)) |> ignore
+
+    member val Message = message with get
+```
+
+I know that I am ignoring a subscription, and this should be disposed, but for now I am not going to worry about that.
+
+## AppBootstrapper
+This is not going to just run, because we need to first tell the app what that "MainPage" is.
+
+In ReactiveUI, it is common to use an AppBootstrapper. This also acts as out `IScreen` that gets sent to the View Model.
+
+We create a new code file called `AppBootstrapper.fs`.  
+In here we need to set up a very basic service locator. We will use `Splat` because it bundles with ReactiveUI. It might not be my favorite in some regards, but it is very quick to get going, and for a small project it does the job.
+We need to connect `AppBootstrapper` to `IScreen`, and we need to connect our View to out View Model. We also need a small function that will create out MainPage.
+```fsharp
+namespace Jon.FXamRx
+
+open ReactiveUI
+open Splat
+open ReactiveUI.XamForms
+open Jon.FXamRx
+open Xamarin.Forms
+
+type AppBootstrapper() as this =
+    inherit ReactiveObject()
+
+    let router = new RoutingState()
+
+    do
+        Locator.CurrentMutable.RegisterConstant<IScreen> this
+        Locator.CurrentMutable.Register (fun () -> new MyReactiveView() :> IViewFor<MyReactiveViewModel>)
+        router.NavigateAndReset.Execute(MyReactiveViewModel()) |> ignore
+
+    member __.CreateMainPage() =
+        new RoutedViewHost() :> Page
+
+    interface IScreen with
+        member __.Router
+            with get() =
+                router
+```
+
+## App.fs
+`App.fs` just needs to be wired up to create the Bootsrapper and grab the Main Page.
+```fsharp
+namespace Jon.FXamRx
+
+open Xamarin.Forms
+
+type App () =
+    inherit Application (MainPage = AppBootstrapper().CreateMainPage())
+```
+
+## Conclusion
+This now builds, and the expected message is showen on the screen. It might seem like a lot of work for just a message, but this outline should make the next steps of any apps a little easier.
+
+The code, up to this point, is available [on GitHub](https://github.com/Thorocaine/JonathanPeelBlog/tree/master/Xamarin-F%23/FXamRx).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0NDU5NzMxMSwxMDM3Nzg0NTU5LC0xNT
-E5OTAwODQsLTE4NzMyMDY1OTZdfQ==
+eyJoaXN0b3J5IjpbLTcyOTExMzY3NCwtMTA3MzUwMjczNSwtMT
+QzNzkyNjQzMywxODcyODczMjIsLTQzNzE4OTM1MSwtNDY4NTg1
+NzQwLC0xMjk2MjIyNzc3LC0xNzYxODM5NDQ0LDY5MDAzNTE4NS
+wxNTQ0NTk3MzExLDEwMzc3ODQ1NTksLTE1MTk5MDA4NCwtMTg3
+MzIwNjU5Nl19
 -->
