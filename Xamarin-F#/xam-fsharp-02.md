@@ -163,9 +163,14 @@ This now builds, and the expected message is shown on the screen. It might seem 
 
 The code, up to this point, is available [on GitHub](https://github.com/Thorocaine/JonathanPeelBlog/tree/master/Xamarin-F%23/FXamRx).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzIxODEwMjExLC03MjkxMTM2NzQsLTEwNz
-M1MDI3MzUsLTE0Mzc5MjY0MzMsMTg3Mjg3MzIyLC00MzcxODkz
-NTEsLTQ2ODU4NTc0MCwtMTI5NjIyMjc3NywtMTc2MTgzOTQ0NC
-w2OTAwMzUxODUsMTU0NDU5NzMxMSwxMDM3Nzg0NTU5LC0xNTE5
-OTAwODQsLTE4NzMyMDY1OTZdfQ==
+eyJwcm9wZXJ0aWVzIjoidGl0bGU6ICdYYW1hcmluIEZvcm1zLC
+B3aXRoIEYjIC0gUGFydCAyLCBSZWFjdGl2ZVVJJ1xuYXV0aG9y
+OiBKb25hdGhhbiBQZWVsXG50YWdzOiAnLk5ldCwgRiMsIFhhbW
+FyaW4sIFhhbWFyaW4uRm9ybXMsIFJlYWN0aXZlVUksIFJlYWN0
+aXZlIEV4dGVuc2lvbnMsIFJ4J1xuIiwiaGlzdG9yeSI6Wzc1OD
+EzNzkwOCw3MjE4MTAyMTEsLTcyOTExMzY3NCwtMTA3MzUwMjcz
+NSwtMTQzNzkyNjQzMywxODcyODczMjIsLTQzNzE4OTM1MSwtND
+Y4NTg1NzQwLC0xMjk2MjIyNzc3LC0xNzYxODM5NDQ0LDY5MDAz
+NTE4NSwxNTQ0NTk3MzExLDEwMzc3ODQ1NTksLTE1MTk5MDA4NC
+wtMTg3MzIwNjU5Nl19
 -->
