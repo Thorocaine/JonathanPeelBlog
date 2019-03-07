@@ -128,9 +128,9 @@ type App () =
 ```
 
 ## Conclusion
-This now builds, and the expected message is showen on the screen.
+This now builds, and the expected message is showen on the screen. It might seem like a lot of work for just a message, but this outline should make the next steps of any apps a little easier.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzE1MDQ5NTksLTEwNzM1MDI3MzUsLT
+eyJoaXN0b3J5IjpbLTEzMjE2NTE5NjEsLTEwNzM1MDI3MzUsLT
 E0Mzc5MjY0MzMsMTg3Mjg3MzIyLC00MzcxODkzNTEsLTQ2ODU4
 NTc0MCwtMTI5NjIyMjc3NywtMTc2MTgzOTQ0NCw2OTAwMzUxOD
 UsMTU0NDU5NzMxMSwxMDM3Nzg0NTU5LC0xNTE5OTAwODQsLTE4
