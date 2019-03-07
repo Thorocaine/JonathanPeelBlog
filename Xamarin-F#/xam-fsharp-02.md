@@ -28,6 +28,7 @@ open Splat
 
 type MyReactiveViewModel (?hostScreen: IScreen) =
     inherit ReactiveObject()
+    new() = MyReactiveViewModel(null)
 
     member this.Message = "Welcom to a basic MVVM"
 
@@ -77,7 +78,7 @@ type MyReactiveView () as this =
     member val Message = message with get
 ```
 
-I know that I am ignoring a subscription, and this should be disposed, but for now I am not goi
+I know that I am ignoring a subscription, and this should be disposed, but for now I am not going to worry about that.
 
 ## AppBootstrapper
 This is not going to just run, because we need to first tell the app what that "MainPage" is.
@@ -119,7 +120,7 @@ type App () =
     inherit Application (MainPage = AppBootstrapper().CreateMainPage())
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxODA3Mjc1MiwtMTQzNzkyNjQzMywxOD
+eyJoaXN0b3J5IjpbMTAzMDg5MzY4NiwtMTQzNzkyNjQzMywxOD
 cyODczMjIsLTQzNzE4OTM1MSwtNDY4NTg1NzQwLC0xMjk2MjIy
 Nzc3LC0xNzYxODM5NDQ0LDY5MDAzNTE4NSwxNTQ0NTk3MzExLD
 EwMzc3ODQ1NTksLTE1MTk5MDA4NCwtMTg3MzIwNjU5Nl19
