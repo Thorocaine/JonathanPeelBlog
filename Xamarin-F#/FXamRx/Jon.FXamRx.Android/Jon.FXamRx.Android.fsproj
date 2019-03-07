@@ -23,6 +23,7 @@
     </NuGetPackageImportStamp>
     <SelectedDevice>kaicom K7</SelectedDevice>
     <DefaultDevice>fk7</DefaultDevice>
+    <AndroidDesignerPreferredTheme>Theme.DeviceDefault.NoActionBar.Fullscreen</AndroidDesignerPreferredTheme>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>

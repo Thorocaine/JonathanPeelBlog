@@ -5,9 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="Page2.xaml.fs" />
     <Compile Include="MyReactiveViewModel.fs" />
-    <Compile Include="Page1.fs" />
+    <Compile Include="MyReactiveView.xaml.fs" />
+    <Compile Include="Page2.xaml.fs" />
+    <Compile Include="AppBootstrapper.fs" />
     <Compile Include="App.fs" />
   </ItemGroup>
 
@@ -20,10 +21,12 @@
     <EmbeddedResource Update="Page2.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="MyReactiveView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Update="FSharp.Core" Version="4.6.2" />
   </ItemGroup>
-
 </Project>
