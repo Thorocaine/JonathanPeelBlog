@@ -94,19 +94,27 @@ namespace Jon.FXamRx
 open ReactiveUI
 open Splat
 open ReactiveUI.XamForms
+open Jon.FXamRx
+open Xamarin.Forms
 
-type AppBootstrapper () as this =
-    inherit ReactiveObject ()
+type AppBootstrapper() as this =
+    inherit ReactiveObject()
 
-    let locator = Locator.CurrentMutable
+    let router = new RoutingState()
+
     do
-        locator.RegisterConstant (this :> IScreen)
-        locator.Register(fun _ -> MyReactiveView() :> IViewFor<MyReactiveViewModel> )
+        Locator.CurrentMutable.RegisterConstant(this, typeof<IScreen>)
+        Locator.CurrentMutable.Register((fun () -> new MyReactiveView() :> obj), typeof<IViewFor<MyReactiveViewModel>>)
+        router.NavigateAndReset.Execute(MyReactiveViewModel()) |> ignore
+
+    member __.CreateMainPage() =
+        new RoutedViewHost() :> Page
 
     interface IScreen with
-        member this.Router = RoutingState ()
+        member __.Router
+            with get() =
+                router
 
-    member this.CreateMainPage () = RoutedViewHost()
 ```
 
 ## App.fs
@@ -120,8 +128,9 @@ type App () =
     inherit Application (MainPage = AppBootstrapper().CreateMainPage())
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzMDg5MzY4NiwtMTQzNzkyNjQzMywxOD
-cyODczMjIsLTQzNzE4OTM1MSwtNDY4NTg1NzQwLC0xMjk2MjIy
-Nzc3LC0xNzYxODM5NDQ0LDY5MDAzNTE4NSwxNTQ0NTk3MzExLD
-EwMzc3ODQ1NTksLTE1MTk5MDA4NCwtMTg3MzIwNjU5Nl19
+eyJoaXN0b3J5IjpbLTEwNzM1MDI3MzUsLTE0Mzc5MjY0MzMsMT
+g3Mjg3MzIyLC00MzcxODkzNTEsLTQ2ODU4NTc0MCwtMTI5NjIy
+Mjc3NywtMTc2MTgzOTQ0NCw2OTAwMzUxODUsMTU0NDU5NzMxMS
+wxMDM3Nzg0NTU5LC0xNTE5OTAwODQsLTE4NzMyMDY1OTZdfQ==
+
 -->
