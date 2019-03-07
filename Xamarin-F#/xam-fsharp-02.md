@@ -129,10 +129,12 @@ type App () =
 
 ## Conclusion
 This now builds, and the expected message is showen on the screen. It might seem like a lot of work for just a message, but this outline should make the next steps of any apps a little easier.
+
+The code, up to this point, is available [on GitHub](https://github.com/Thorocaine/JonathanPeelBlog/tree/master/Xamarin-F%23/FXamRx).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjE2NTE5NjEsLTEwNzM1MDI3MzUsLT
-E0Mzc5MjY0MzMsMTg3Mjg3MzIyLC00MzcxODkzNTEsLTQ2ODU4
-NTc0MCwtMTI5NjIyMjc3NywtMTc2MTgzOTQ0NCw2OTAwMzUxOD
-UsMTU0NDU5NzMxMSwxMDM3Nzg0NTU5LC0xNTE5OTAwODQsLTE4
-NzMyMDY1OTZdfQ==
+eyJoaXN0b3J5IjpbLTcyOTExMzY3NCwtMTA3MzUwMjczNSwtMT
+QzNzkyNjQzMywxODcyODczMjIsLTQzNzE4OTM1MSwtNDY4NTg1
+NzQwLC0xMjk2MjIyNzc3LC0xNzYxODM5NDQ0LDY5MDAzNTE4NS
+wxNTQ0NTk3MzExLDEwMzc3ODQ1NTksLTE1MTk5MDA4NCwtMTg3
+MzIwNjU5Nl19
 -->
