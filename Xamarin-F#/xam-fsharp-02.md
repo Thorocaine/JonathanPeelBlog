@@ -103,8 +103,8 @@ type AppBootstrapper() as this =
     let router = new RoutingState()
 
     do
-        Locator.CurrentMutable.RegisterConstant(this, typeof<IScreen>)
-        Locator.CurrentMutable.Register((fun () -> new MyReactiveView() :> obj), typeof<IViewFor<MyReactiveViewModel>>)
+        Locator.CurrentMutable.RegisterConstant<IScreen> this
+        Locator.CurrentMutable.Register (fun () -> new MyReactiveView() :> IViewFor<MyReactiveViewModel>)
         router.NavigateAndReset.Execute(MyReactiveViewModel()) |> ignore
 
     member __.CreateMainPage() =
@@ -114,7 +114,6 @@ type AppBootstrapper() as this =
         member __.Router
             with get() =
                 router
-
 ```
 
 ## App.fs
@@ -127,10 +126,13 @@ open Xamarin.Forms
 type App () =
     inherit Application (MainPage = AppBootstrapper().CreateMainPage())
 ```
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzM1MDI3MzUsLTE0Mzc5MjY0MzMsMT
-g3Mjg3MzIyLC00MzcxODkzNTEsLTQ2ODU4NTc0MCwtMTI5NjIy
-Mjc3NywtMTc2MTgzOTQ0NCw2OTAwMzUxODUsMTU0NDU5NzMxMS
-wxMDM3Nzg0NTU5LC0xNTE5OTAwODQsLTE4NzMyMDY1OTZdfQ==
 
+## Conclusion
+This now builds, and the expected message is showen on the screen.
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE4MzE1MDQ5NTksLTEwNzM1MDI3MzUsLT
+E0Mzc5MjY0MzMsMTg3Mjg3MzIyLC00MzcxODkzNTEsLTQ2ODU4
+NTc0MCwtMTI5NjIyMjc3NywtMTc2MTgzOTQ0NCw2OTAwMzUxOD
+UsMTU0NDU5NzMxMSwxMDM3Nzg0NTU5LC0xNTE5OTAwODQsLTE4
+NzMyMDY1OTZdfQ==
 -->
