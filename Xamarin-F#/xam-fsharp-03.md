@@ -14,8 +14,8 @@ Most the work will be done in `MyReactiveViewModel.fs`. Once that is done, the b
 
 I have found a few ways that this can be defined. The one option is to make the variable mutable. I don't like this. In _C#_ it is possible to do this with a readonly variable, so it seems strange needing to make it mutable in _F#_.
 
-If the variable is defined as a reference, it can be passed into a _byref_ parameter
+If the variable is defined as a reference, it can be passed into a _byref_ parameter. That is what I will use, until I find a better way.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTk5NzM5NDQsLTc2NzIyMjE0LC0xMTQ0NT
-Y3ODU2LDQ4NDc0NTQyMCwyODEyMzQ0MzldfQ==
+eyJoaXN0b3J5IjpbMTUxODM3MTkxMywtNzY3MjIyMTQsLTExND
+Q1Njc4NTYsNDg0NzQ1NDIwLDI4MTIzNDQzOV19
 -->
