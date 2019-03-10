@@ -65,9 +65,9 @@ type MyReactiveView () as this =
 ```
 
 ### +/- Stepper
-I am back to MyReactiveViewModel.fs
+I am back to `MyReactiveViewModel.fs`. I want to add variable to store the current value, and add two commands. One for increase, and one for decreae.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDAyNjMwNjksMTUxODM3MTkxMywtNz
-Y3MjIyMTQsLTExNDQ1Njc4NTYsNDg0NzQ1NDIwLDI4MTIzNDQz
-OV19
+eyJoaXN0b3J5IjpbMTMzNjQwNDA5MSwxNTE4MzcxOTEzLC03Nj
+cyMjIxNCwtMTE0NDU2Nzg1Niw0ODQ3NDU0MjAsMjgxMjM0NDM5
+XX0=
 -->
