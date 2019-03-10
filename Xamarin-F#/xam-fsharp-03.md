@@ -128,10 +128,49 @@ type MyReactiveView () as this =
     member val StepDown = base.FindByName<Button>("StepDown") with get
 ```
 
-This w
+This works, but I want to change it a little. Instead of using `OnAppearing`, I can use something buid into `ReactiveUI` called `WhenActivated`.
+
+My code is now:
+```fsharp
+namespace Jon.FXamRx
+
+open ReactiveUI.XamForms
+open Xamarin.Forms.Xaml
+open ReactiveUI
+open Xamarin.Forms
+open System.Reactive.Disposables
+
+type MyReactiveView () as this =
+    inherit ReactiveContentPage<MyReactiveViewModel> ()
+    let _ = base.LoadFromXaml(typeof<MyReactiveView>)
+
+    let activated disposables =
+       this.OneWayBind(this.ViewModel, (fun vm -> vm.Counter), (fun v -> (v.Message : Label).Text), (fun x -> x.ToString()))
+           .DisposeWith(disposables)
+           |> ignore
+
+       this.OneWayBind(this.ViewModel, (fun vm -> vm.StepValue), (fun v -> (v.Message : Label).Text), (fun x -> x.ToString()))
+           .DisposeWith(disposables)
+           |> ignore
+
+       this.BindCommand(this.ViewModel, (fun vm -> vm.StepUpCommand), (fun v -> v.StepUp))
+           .DisposeWith(disposables)
+           |> ignore
+
+       this.BindCommand(this.ViewModel, (fun vm -> vm.StepDownCommand), (fun v -> v.StepDown))
+           .DisposeWith(disposables)
+           |> ignore
+
+    do this.WhenActivated(activated) |> ignore
+
+    member val Message = base.FindByName<Label>("Counter") with get
+    member val StepValue = base.FindByName<Label>("StepValue") with get
+    member val StepUp = base.FindByName<Button>("StepUp") with get
+    member val StepDown = base.FindByName<Button>("StepDown") with get
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODY2OTg3NTA4LDE2OTY3NjE2NzcsMTIzMD
-E0ODU0OSwtMjM1NTg1MzAsMTMzNjQwNDA5MSwxNTE4MzcxOTEz
-LC03NjcyMjIxNCwtMTE0NDU2Nzg1Niw0ODQ3NDU0MjAsMjgxMj
-M0NDM5XX0=
+eyJoaXN0b3J5IjpbMTQxNTAxNzQ1NywxNjk2NzYxNjc3LDEyMz
+AxNDg1NDksLTIzNTU4NTMwLDEzMzY0MDQwOTEsMTUxODM3MTkx
+MywtNzY3MjIyMTQsLTExNDQ1Njc4NTYsNDg0NzQ1NDIwLDI4MT
+IzNDQzOV19
 -->
