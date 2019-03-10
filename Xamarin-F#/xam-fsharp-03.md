@@ -1,7 +1,7 @@
 It is time to add some actual/more reaxtive things to this. I am going to try a few simple examples.
- - A search box that will list a few predefined options.
  - A counter that will increment every 10 seconds.
  - A +/- button that will modify a number.
+ - A search box that will list a few predefined options.
 
 ## Copy the project
 I am going to copy my `FXamRx` project, but I won't rename anything.
@@ -63,8 +63,11 @@ type MyReactiveView () as this =
 
     member val Message = message with get
 ```
+
+### +/- Stepper
+I am back to MyReactiveViewModel.fs
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDE2NTMzMzczLDE1MTgzNzE5MTMsLTc2Nz
-IyMjE0LC0xMTQ0NTY3ODU2LDQ4NDc0NTQyMCwyODEyMzQ0Mzld
-fQ==
+eyJoaXN0b3J5IjpbLTE4NDAyNjMwNjksMTUxODM3MTkxMywtNz
+Y3MjIyMTQsLTExNDQ1Njc4NTYsNDg0NzQ1NDIwLDI4MTIzNDQz
+OV19
 -->
