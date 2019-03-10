@@ -76,14 +76,14 @@ I add
         with get () = stepValueRef.Value
         and set value = this.RaiseAndSetIfChanged(stepValueRef, value) |> ignore
         
-    member this.StepUpCommand = ReactiveCommand.Create(fun () -> this.StepValue <- this.StepValue - 1)
-    member this.StepDownCommand = ReactiveCommand.Create(fun () -> this.StepValue <- this.StepValue + 1)
+    member this.StepUpCommand = ReactiveCommand.Create(fun () -> this.StepValue <- this.StepValue + 1)
+    member this.StepDownCommand = ReactiveCommand.Create(fun () -> this.StepValue <- this.StepValue - 1)
 ```
 
 I am using a `ref` again, it works nicely with the byref parameter of `RaiseAndSetIfChanged`.
 
 I add the needed controls to `MyReactiveView.xaml`, and while I have it open I rename Message.
-```fsharp
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <rxFroms:ReactiveContentPage xmlns="http://xamarin.com/schemas/2014/forms"
                              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -103,8 +103,32 @@ I add the needed controls to `MyReactiveView.xaml`, and while I have it open I r
 ```
 
 Then I edit `MyReactiveView.xaml.fs` to configure all the needed bindings.
+```fsharp
+namespace Jon.FXamRx
+
+open ReactiveUI.XamForms
+open Xamarin.Forms.Xaml
+open ReactiveUI
+open Xamarin.Forms
+
+type MyReactiveView () as this =
+    inherit ReactiveContentPage<MyReactiveViewModel> ()
+    let _ = base.LoadFromXaml(typeof<MyReactiveView>)
+
+    override __.OnAppearing() =
+        base.OnAppearing()
+        this.OneWayBind (this.ViewModel, (fun vm -> vm.Counter), (fun v -> (v.Message : Label).Text), (fun x -> x.ToString())) |> ignore
+        this.OneWayBind (this.ViewModel, (fun vm -> vm.StepValue), (fun v -> (v.Message : Label).Text), (fun x -> x.ToString())) |> ignore
+        this.BindCommand (this.ViewModel, (fun vm -> vm.StepUpCommand), (fun v -> v.StepUp)) |> ignore
+        this.BindCommand (this.ViewModel, (fun vm -> vm.StepDownCommand), (fun v -> v.StepDown)) |> ignore
+
+    member val Message = base.FindByName<Label>("Counter") with get
+    member val StepValue = base.FindByName<Label>("StepValue") with get
+    member val StepUp = base.FindByName<Button>("StepUp") with get
+    member val StepDown = base.FindByName<Button>("StepDown") with get
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzMDE0ODU0OSwtMjM1NTg1MzAsMTMzNj
-QwNDA5MSwxNTE4MzcxOTEzLC03NjcyMjIxNCwtMTE0NDU2Nzg1
-Niw0ODQ3NDU0MjAsMjgxMjM0NDM5XX0=
+eyJoaXN0b3J5IjpbMTY5Njc2MTY3NywxMjMwMTQ4NTQ5LC0yMz
+U1ODUzMCwxMzM2NDA0MDkxLDE1MTgzNzE5MTMsLTc2NzIyMjE0
+LC0xMTQ0NTY3ODU2LDQ4NDc0NTQyMCwyODEyMzQ0MzldfQ==
 -->
