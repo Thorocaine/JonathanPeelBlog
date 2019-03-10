@@ -16,9 +16,34 @@ I have found a few ways that this can be defined. The one option is to make the 
 
 If the variable is defined as a reference, it can be passed into a _byref_ parameter. That is what I will use, until I find a better way.
 
-T
+This ends up being
+```fsharp
+namespace Jon.FXamRx
+
+open ReactiveUI
+open Splat
+open System
+open System.Reactive.Linq
+
+type MyReactiveViewModel (?hostScreen: IScreen) as this =
+    inherit ReactiveObject()
+    let counterRef = ref null
+
+    do
+        Observable
+            .Interval(TimeSpan.FromSeconds 10.0, RxApp.TaskpoolScheduler)
+            .ToProperty(this, "Counter", counterRef, 0L, scheduler = RxApp.MainThreadScheduler)
+            |> ignore
+
+    new() = MyReactiveViewModel(null)
+    member this.Counter = counterRef.Value.Value;
+
+    interface IRoutableViewModel with
+        member this.HostScreen: IScreen = if hostScreen.IsSome then hostScreen.Value else Locator.Current.GetService<IScreen>()
+        member this.UrlPathSegment: string = ""
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0Nzc0MTQ5LDE1MTgzNzE5MTMsLTc2Nz
-IyMjE0LC0xMTQ0NTY3ODU2LDQ4NDc0NTQyMCwyODEyMzQ0Mzld
-fQ==
+eyJoaXN0b3J5IjpbLTEzNjg4NDM1MTcsMTUxODM3MTkxMywtNz
+Y3MjIyMTQsLTExNDQ1Njc4NTYsNDg0NzQ1NDIwLDI4MTIzNDQz
+OV19
 -->
