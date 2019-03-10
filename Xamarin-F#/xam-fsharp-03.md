@@ -66,9 +66,21 @@ type MyReactiveView () as this =
 
 ### +/- Stepper
 I am back to `MyReactiveViewModel.fs`. I want to add variable to store the current value, and add two commands. One for increase, and one for decreae.
-I ad
+I add
+```fsharp
+	let stepValueRef = ref 0
+   
+    ...
+
+    member this.StepValue
+        with get () = stepValueRef.Value
+        and set value = this.RaiseAndSetIfChanged(stepValueRef, value) |> ignore
+        
+    member this.DecCommand = ReactiveCommand.Create(fun () -> this.StepValue <- this.StepValue - 1)
+    member this.IncCommand = ReactiveCommand.Create(fun () -> this.StepValue <- this.StepValue + 1)
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTkyNTM0MjUsMTMzNjQwNDA5MSwxNT
+eyJoaXN0b3J5IjpbLTIwNDM2OTc5MjMsMTMzNjQwNDA5MSwxNT
 E4MzcxOTEzLC03NjcyMjIxNCwtMTE0NDU2Nzg1Niw0ODQ3NDU0
 MjAsMjgxMjM0NDM5XX0=
 -->
