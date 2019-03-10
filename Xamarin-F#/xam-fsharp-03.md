@@ -43,9 +43,28 @@ type MyReactiveViewModel (?hostScreen: IScreen) as this =
         member this.UrlPathSegment: string = ""
 ```
 
-I modify `MyReactiveView.xaml.fs`. For now I keep the Message label, but I will 
+I modify `MyReactiveView.xaml.fs`. For now I keep the Message label, but I will rename that later.
+```fsharp
+namespace Jon.FXamRx
+
+open ReactiveUI.XamForms
+open Xamarin.Forms.Xaml
+open ReactiveUI
+open Xamarin.Forms
+
+type MyReactiveView () as this =
+    inherit ReactiveContentPage<MyReactiveViewModel> ()
+    let _ = base.LoadFromXaml(typeof<MyReactiveView>)
+    let message = base.FindByName<Label>("Message")
+
+    override __.OnAppearing() =
+        base.OnAppearing()
+        this.OneWayBind (this.ViewModel, (fun vm -> vm.Counter), (fun v -> (v.Message : Label).Text), (fun x -> x.ToString())) |> ignore
+
+    member val Message = message with get
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwNjczNTkwLDE1MTgzNzE5MTMsLTc2Nz
+eyJoaXN0b3J5IjpbNDE2NTMzMzczLDE1MTgzNzE5MTMsLTc2Nz
 IyMjE0LC0xMTQ0NTY3ODU2LDQ4NDc0NTQyMCwyODEyMzQ0Mzld
 fQ==
 -->
