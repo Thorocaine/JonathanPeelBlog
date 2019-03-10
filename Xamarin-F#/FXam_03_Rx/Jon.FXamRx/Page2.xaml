@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Jon.FXamRx"
+             x:Class="Jon.FXamRx.Page2">
+    <Label Text="Welcome to F# &amp; Xamarin Forms, now with XAML!!!" VerticalOptions="Center" HorizontalOptions="Center" />
+</ContentPage>
