@@ -79,8 +79,10 @@ I add
     member this.DecCommand = ReactiveCommand.Create(fun () -> this.StepValue <- this.StepValue - 1)
     member this.IncCommand = ReactiveCommand.Create(fun () -> this.StepValue <- this.StepValue + 1)
 ```
+
+I am using a `ref` again, it works nicely with the byref parameter of `RaiseAndSetIfChanged`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDM2OTc5MjMsMTMzNjQwNDA5MSwxNT
-E4MzcxOTEzLC03NjcyMjIxNCwtMTE0NDU2Nzg1Niw0ODQ3NDU0
-MjAsMjgxMjM0NDM5XX0=
+eyJoaXN0b3J5IjpbLTIzNTU4NTMwLDEzMzY0MDQwOTEsMTUxOD
+M3MTkxMywtNzY3MjIyMTQsLTExNDQ1Njc4NTYsNDg0NzQ1NDIw
+LDI4MTIzNDQzOV19
 -->
