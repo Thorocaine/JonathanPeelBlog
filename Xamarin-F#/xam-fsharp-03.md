@@ -10,8 +10,8 @@ I am going to copy my `FXamRx` project, but I won't rename anything.
 Most the work will be done in `MyReactiveViewModel.fs`. Once that is done, the binding will be done in the view.
 
 ### Counter
-Reactive
+`ReactiveUI` allows properties to be linked to observables.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTE3OTQzNDksNDg0NzQ1NDIwLDI4MT
+eyJoaXN0b3J5IjpbLTExNDQ1Njc4NTYsNDg0NzQ1NDIwLDI4MT
 IzNDQzOV19
 -->
