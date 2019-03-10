@@ -76,13 +76,13 @@ I add
         with get () = stepValueRef.Value
         and set value = this.RaiseAndSetIfChanged(stepValueRef, value) |> ignore
         
-    member this.DecCommand = ReactiveCommand.Create(fun () -> this.StepValue <- this.StepValue - 1)
-    member this.IncCommand = ReactiveCommand.Create(fun () -> this.StepValue <- this.StepValue + 1)
+    member this.StepUpCommand = ReactiveCommand.Create(fun () -> this.StepValue <- this.StepValue - 1)
+    member this.StepDownCommand = ReactiveCommand.Create(fun () -> this.StepValue <- this.StepValue + 1)
 ```
 
 I am using a `ref` again, it works nicely with the byref parameter of `RaiseAndSetIfChanged`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzNTU4NTMwLDEzMzY0MDQwOTEsMTUxOD
-M3MTkxMywtNzY3MjIyMTQsLTExNDQ1Njc4NTYsNDg0NzQ1NDIw
-LDI4MTIzNDQzOV19
+eyJoaXN0b3J5IjpbMTQxNTM3ODQ5MSwtMjM1NTg1MzAsMTMzNj
+QwNDA5MSwxNTE4MzcxOTEzLC03NjcyMjIxNCwtMTE0NDU2Nzg1
+Niw0ODQ3NDU0MjAsMjgxMjM0NDM5XX0=
 -->
