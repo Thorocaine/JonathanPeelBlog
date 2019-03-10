@@ -81,8 +81,30 @@ I add
 ```
 
 I am using a `ref` again, it works nicely with the byref parameter of `RaiseAndSetIfChanged`.
+
+I add the needed controls to `MyReactiveView.xaml`, and while I have it open I rename Message.
+```fsharp
+<?xml version="1.0" encoding="utf-8"?>
+<rxFroms:ReactiveContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                             xmlns:rxFroms="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
+                             xmlns:local="clr-namespace:Jon.FXamRx"
+                             x:Class="Jon.FXamRx.MyReactiveView"
+                             x:TypeArguments="local:MyReactiveViewModel">
+    <StackLayout>
+        <Label x:Name="Counter" VerticalOptions="Center" HorizontalOptions="Center" />
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="StepUp" Text="+" />
+            <Label x:Name="StepValue" VerticalOptions="Center" HorizontalOptions="Center" />
+            <Button x:Name="StepDown" Text="-" />
+        </StackLayout>
+    </StackLayout>
+</rxFroms:ReactiveContentPage>
+```
+
+Then I edit `MyReactiveView.xaml.fs` to configure all the needed bindings.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxNTM3ODQ5MSwtMjM1NTg1MzAsMTMzNj
+eyJoaXN0b3J5IjpbMTIzMDE0ODU0OSwtMjM1NTg1MzAsMTMzNj
 QwNDA5MSwxNTE4MzcxOTEzLC03NjcyMjIxNCwtMTE0NDU2Nzg1
 Niw0ODQ3NDU0MjAsMjgxMjM0NDM5XX0=
 -->
