@@ -7,7 +7,10 @@ It is time to add some actual/more reaxtive things to this. I am going to try a 
 I am going to copy my `FXamRx` project, but I won't rename anything.
 
 ## MyReactiveViewModel
-Most the work will be done in `MyReactiveViewModel.fs`. Once that is done, the binding will be done in 
+Most the work will be done in `MyReactiveViewModel.fs`. Once that is done, the binding will be done in the view.
+
+### Counter
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2NDIxMjc2OSwyODEyMzQ0MzldfQ==
+eyJoaXN0b3J5IjpbNDg0NzQ1NDIwLDI4MTIzNDQzOV19
 -->
