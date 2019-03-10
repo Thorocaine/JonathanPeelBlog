@@ -42,8 +42,10 @@ type MyReactiveViewModel (?hostScreen: IScreen) as this =
         member this.HostScreen: IScreen = if hostScreen.IsSome then hostScreen.Value else Locator.Current.GetService<IScreen>()
         member this.UrlPathSegment: string = ""
 ```
+
+I modify `MyReactiveView.xaml.fs`. For now I keep the Message label, but I will 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjg4NDM1MTcsMTUxODM3MTkxMywtNz
-Y3MjIyMTQsLTExNDQ1Njc4NTYsNDg0NzQ1NDIwLDI4MTIzNDQz
-OV19
+eyJoaXN0b3J5IjpbMTMwNjczNTkwLDE1MTgzNzE5MTMsLTc2Nz
+IyMjE0LC0xMTQ0NTY3ODU2LDQ4NDc0NTQyMCwyODEyMzQ0Mzld
+fQ==
 -->
